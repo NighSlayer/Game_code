@@ -2096,7 +2096,7 @@ func _on_talk_button_pressed():
 	pass
 
 func _on_slave_social_status_button_pressed():
-	
+	call_slave.condition.loyalty += 1
 	pass
 
 func dialog_window(action):
