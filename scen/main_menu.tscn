@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://ddlttv56ip3lx"]
+[gd_scene format=3 uid="uid://ddlttv56ip3lx"]
 
 [ext_resource type="Script" uid="uid://btfigtw8ebskj" path="res://gd/main_menu.gd" id="1_tagku"]
 [ext_resource type="Texture2D" uid="uid://clx81k5qy7miv" path="res://GameData/img/Main menu/Baackground.jpg" id="2_uyeam"]
@@ -81,22 +81,22 @@ stream_2/stream = ExtResource("6_yueji")
 stream_3/stream = ExtResource("7_63pog")
 stream_4/stream = ExtResource("8_h56gs")
 
-[node name="main_menu" type="Node2D"]
+[node name="main_menu" type="Node2D" unique_id=1031399049]
 script = ExtResource("1_tagku")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1151261395]
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_uyeam")
 expand_mode = 1
 
-[node name="Start_buttons" type="Control" parent="."]
+[node name="Start_buttons" type="Control" parent="." unique_id=151882133]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="Start_buttons"]
+[node name="PanelContainer" type="PanelContainer" parent="Start_buttons" unique_id=2023483218]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 0
 offset_left = 192.0
@@ -105,12 +105,12 @@ offset_right = 1728.0
 offset_bottom = 960.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_6sunt")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Start_buttons/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Start_buttons/PanelContainer" unique_id=1635377539]
 layout_mode = 2
 theme_override_constants/separation = 75
 alignment = 1
 
-[node name="GameButton" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer"]
+[node name="GameButton" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer" unique_id=1047963106]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -121,11 +121,11 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_fr5cb")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_n2sdw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4yadm")
 text = "Обучение"
+autowrap_mode = 2
 script = ExtResource("4_wl183")
-base_style = null
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
 
-[node name="Load_game" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer"]
+[node name="Load_game" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer" unique_id=753178091]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -136,10 +136,10 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_gxmjq")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pshrf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4tbam")
 text = "Загрузить"
+autowrap_mode = 2
 script = ExtResource("4_wl183")
-base_style = null
 
-[node name="Start_game" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer"]
+[node name="Start_game" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer" unique_id=2088149992]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -151,12 +151,12 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_c103l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xok3l")
 text = "Начать"
 flat = true
+autowrap_mode = 2
 expand_icon = true
 script = ExtResource("4_wl183")
 path_picture = "uid://cfjit1km5jy8y"
-base_style = null
 
-[node name="Settings" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer"]
+[node name="Settings" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer" unique_id=1781336067]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -168,12 +168,12 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_73fnu")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_amkx2")
 text = "Настройки"
 flat = true
+autowrap_mode = 2
 expand_icon = true
 script = ExtResource("4_wl183")
 path_picture = "uid://cfjit1km5jy8y"
-base_style = null
 
-[node name="Back" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer"]
+[node name="Back" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer" unique_id=1532412738]
 visible = false
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
@@ -186,12 +186,12 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ny1wh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_idwo0")
 text = "Назад"
 flat = true
+autowrap_mode = 2
 expand_icon = true
 script = ExtResource("4_wl183")
 path_picture = "uid://cfjit1km5jy8y"
-base_style = null
 
-[node name="Quit" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer"]
+[node name="Quit" type="Button" parent="Start_buttons/PanelContainer/HBoxContainer" unique_id=400041818]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -203,12 +203,12 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uqw8u")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_uvejj")
 text = "Выход"
 flat = true
+autowrap_mode = 2
 expand_icon = true
 script = ExtResource("4_wl183")
 path_picture = "uid://cfjit1km5jy8y"
-base_style = null
 
-[node name="Settings_control" type="Control" parent="."]
+[node name="Settings_control" type="Control" parent="." unique_id=1957748493]
 visible = false
 layout_mode = 3
 anchors_preset = 0
@@ -217,23 +217,23 @@ offset_top = -328.0
 offset_right = -144.0
 offset_bottom = -288.0
 
-[node name="PanelContainer" type="PanelContainer" parent="Settings_control"]
+[node name="PanelContainer" type="PanelContainer" parent="Settings_control" unique_id=1879605718]
 layout_mode = 0
 offset_left = 1032.0
 offset_top = 600.0
 offset_right = 1249.5
 offset_bottom = 805.5
 
-[node name="TextureRect" type="TextureRect" parent="Settings_control/PanelContainer"]
+[node name="TextureRect" type="TextureRect" parent="Settings_control/PanelContainer" unique_id=1307727096]
 show_behind_parent = true
 layout_mode = 2
 texture = ExtResource("4_w51sp")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Settings_control/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings_control/PanelContainer" unique_id=1323597908]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Settings_control/PanelContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Settings_control/PanelContainer/VBoxContainer" unique_id=881902945]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -242,14 +242,14 @@ text = "Общая громкость"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Master_volume" type="HSlider" parent="Settings_control/PanelContainer/VBoxContainer"]
+[node name="Master_volume" type="HSlider" parent="Settings_control/PanelContainer/VBoxContainer" unique_id=184073639]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="Settings_control/PanelContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="Settings_control/PanelContainer/VBoxContainer" unique_id=1743598952]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -258,13 +258,13 @@ text = "Музыка"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Music" type="HSlider" parent="Settings_control/PanelContainer/VBoxContainer"]
+[node name="Music" type="HSlider" parent="Settings_control/PanelContainer/VBoxContainer" unique_id=1459935974]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 value = 1.0
 
-[node name="Label3" type="Label" parent="Settings_control/PanelContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="Settings_control/PanelContainer/VBoxContainer" unique_id=1715538757]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_i2y3u")
@@ -273,14 +273,14 @@ text = "Звуки"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sfx" type="HSlider" parent="Settings_control/PanelContainer/VBoxContainer"]
+[node name="Sfx" type="HSlider" parent="Settings_control/PanelContainer/VBoxContainer" unique_id=692594230]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=563620580]
 stream = SubResource("AudioStreamRandomizer_u4rbk")
 bus = &"Music"
 
