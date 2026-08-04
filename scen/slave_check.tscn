@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cf17gfhu5yxiu"]
+[gd_scene format=3 uid="uid://cf17gfhu5yxiu"]
 
 [ext_resource type="Script" uid="uid://b106jrbjqsiuc" path="res://gd/slave_check.gd" id="1_u5hfi"]
 [ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_dwa6l"]
@@ -54,22 +54,22 @@ bg_color = Color(0, 0, 0, 0.6313726)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fm06"]
 
-[node name="Slave_check" type="Node2D"]
+[node name="Slave_check" type="Node2D" unique_id=926420778]
 script = ExtResource("1_u5hfi")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=597949784]
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_hoi2y")
 
-[node name="Full_slave" type="TextureRect" parent="."]
+[node name="Full_slave" type="TextureRect" parent="." unique_id=416175929]
 offset_left = 488.0
 offset_top = 128.0
 offset_right = 1280.0
 offset_bottom = 1080.0
 stretch_mode = 6
 
-[node name="Status_slave" type="TextureRect" parent="."]
+[node name="Status_slave" type="TextureRect" parent="." unique_id=680304778]
 offset_left = 1280.0
 offset_top = 128.0
 offset_right = 1856.0
@@ -77,24 +77,24 @@ offset_bottom = 1024.0
 texture = ExtResource("3_7nw48")
 expand_mode = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="Status_slave"]
+[node name="PanelContainer" type="PanelContainer" parent="Status_slave" unique_id=1303392968]
 layout_mode = 0
 offset_right = 576.0
 offset_bottom = 896.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ov0ey")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Status_slave/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_slave/PanelContainer" unique_id=322622776]
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="Slave_name" type="Label" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Slave_name" type="Label" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=2107081397]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Сакура"
 horizontal_alignment = 1
 
-[node name="Button_condition" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_condition" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1309274606]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -108,7 +108,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Состояние"
 
-[node name="Button_apperance" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_apperance" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1770968904]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
@@ -121,7 +121,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Внешний вид"
 
-[node name="Button_anatomy" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_anatomy" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=979198689]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
@@ -134,7 +134,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Анатомия"
 
-[node name="Button_skills_common" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_skills_common" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=157038927]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
@@ -147,7 +147,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Навыки"
 
-[node name="Button_skills_sex" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_skills_sex" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=936905203]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
@@ -160,7 +160,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Интимные навыки"
 
-[node name="Button_clothes" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_clothes" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1144815121]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
@@ -173,7 +173,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Одежда"
 
-[node name="Button_relationships" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_relationships" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1868190950]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
@@ -186,21 +186,21 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Отношения"
 
-[node name="Features" type="Label" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Features" type="Label" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1561258098]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Особенности"
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1892569482]
 custom_minimum_size = Vector2(0, 151)
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Status_slave/PanelContainer/VBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_slave/PanelContainer/VBoxContainer/ScrollContainer" unique_id=1571862411]
 layout_mode = 2
 
-[node name="Actions" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Actions" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1551125687]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -211,7 +211,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Действия"
 
-[node name="Button_send_basement" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+[node name="Button_send_basement" type="Button" parent="Status_slave/PanelContainer/VBoxContainer" unique_id=1386078694]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
@@ -221,24 +221,24 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
 text = "Отправить в подвал"
 
-[node name="Slaves" type="PanelContainer" parent="."]
+[node name="Slaves" type="PanelContainer" parent="." unique_id=189399793]
 offset_left = 96.0
 offset_top = 128.0
 offset_right = 480.0
 offset_bottom = 1024.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qokbc")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Slaves"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Slaves" unique_id=878329733]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Slaves/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Slaves/ScrollContainer" unique_id=1629658866]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Back" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+[node name="Back" type="Button" parent="Slaves/ScrollContainer/VBoxContainer" unique_id=1509970529]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_7nw48")
@@ -252,7 +252,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Back"]
+[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Back" unique_id=61112074]
 show_behind_parent = true
 light_mask = 0
 layout_mode = 1
@@ -264,10 +264,10 @@ grow_vertical = 2
 texture = ExtResource("2_dwa6l")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Slaves/ScrollContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Slaves/ScrollContainer/VBoxContainer" unique_id=223911592]
 layout_mode = 2
 
-[node name="Show_parametr" type="TextureRect" parent="."]
+[node name="Show_parametr" type="TextureRect" parent="." unique_id=202499089]
 visible = false
 offset_left = 640.0
 offset_top = 128.0
@@ -276,89 +276,89 @@ offset_bottom = 1024.0
 texture = ExtResource("3_7nw48")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr" unique_id=2035020248]
 layout_mode = 0
 offset_right = 576.0
 offset_bottom = 896.0
 
-[node name="Name_parametr" type="Label" parent="Show_parametr/VBoxContainer"]
+[node name="Name_parametr" type="Label" parent="Show_parametr/VBoxContainer" unique_id=2133643055]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Параметр"
 horizontal_alignment = 1
 
-[node name="Show_pictures" type="Button" parent="Show_parametr"]
+[node name="Show_pictures" type="Button" parent="Show_parametr" unique_id=748319946]
 layout_mode = 0
 offset_right = 88.0
 offset_bottom = 48.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_s8oh3")
 toggle_mode = true
 
-[node name="Hide_parametr" type="Button" parent="Show_parametr"]
+[node name="Hide_parametr" type="Button" parent="Show_parametr" unique_id=696572607]
 layout_mode = 0
 offset_left = 520.0
 offset_right = 576.0
 offset_bottom = 48.0
 
-[node name="Pictures" type="PanelContainer" parent="Show_parametr"]
+[node name="Pictures" type="PanelContainer" parent="Show_parametr" unique_id=2048828081]
 layout_mode = 0
 offset_left = -360.0
 offset_right = -64.0
 offset_bottom = 896.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr/Pictures"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr/Pictures" unique_id=1825695617]
 layout_mode = 2
 
-[node name="Boobs" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("8_qwlju")
-expand_mode = 5
-
-[node name="Anus" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
+[node name="Boobs" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer" unique_id=245518770]
 layout_mode = 2
 texture = ExtResource("8_qwlju")
 expand_mode = 5
 
-[node name="Pussy" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
+[node name="Anus" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer" unique_id=1969405963]
+layout_mode = 2
+texture = ExtResource("8_qwlju")
+expand_mode = 5
+
+[node name="Pussy" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer" unique_id=1069395432]
 layout_mode = 2
 texture = ExtResource("9_6anof")
 expand_mode = 5
 
-[node name="Pussy_in" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
+[node name="Pussy_in" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer" unique_id=1801579186]
 layout_mode = 2
 texture = ExtResource("10_dviym")
 expand_mode = 5
 
-[node name="Choose_clothes" type="PanelContainer" parent="Show_parametr"]
+[node name="Choose_clothes" type="PanelContainer" parent="Show_parametr" unique_id=630352897]
 layout_mode = 0
 offset_left = -544.0
 offset_right = -64.0
 offset_bottom = 896.0
 
-[node name="TextureRect" type="TextureRect" parent="Show_parametr/Choose_clothes"]
+[node name="TextureRect" type="TextureRect" parent="Show_parametr/Choose_clothes" unique_id=1280691676]
 layout_mode = 2
 texture = ExtResource("3_7nw48")
 expand_mode = 5
 stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr/Choose_clothes"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr/Choose_clothes" unique_id=296067979]
 layout_mode = 2
 
-[node name="Name_parametr" type="Label" parent="Show_parametr/Choose_clothes/VBoxContainer"]
+[node name="Name_parametr" type="Label" parent="Show_parametr/Choose_clothes/VBoxContainer" unique_id=2117680195]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Часть тела"
 horizontal_alignment = 1
 
-[node name="Settings" type="Button" parent="."]
+[node name="Settings" type="Button" parent="." unique_id=542091082]
 offset_left = 1800.0
 offset_top = 64.0
 offset_right = 1856.0
 offset_bottom = 112.0
 
-[node name="TextureRect" type="TextureRect" parent="Settings"]
+[node name="TextureRect" type="TextureRect" parent="Settings" unique_id=7573853]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -368,7 +368,7 @@ grow_vertical = 2
 texture = ExtResource("9_m67wb")
 expand_mode = 1
 
-[node name="AcceptDialog" type="AcceptDialog" parent="."]
+[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=1241022386]
 auto_translate_mode = 1
 oversampling_override = 1.0
 title = "Внимание!"
@@ -378,19 +378,19 @@ max_size = Vector2i(250, 250)
 theme_override_styles/panel = SubResource("StyleBoxTexture_wfmwt")
 dialog_text = "У вас максимум рабов в подвале"
 
-[node name="Dialog_scene" type="TextureRect" parent="."]
+[node name="Dialog_scene" type="TextureRect" parent="." unique_id=2093852549]
 visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="Dialog_window" type="PanelContainer" parent="Dialog_scene"]
+[node name="Dialog_window" type="PanelContainer" parent="Dialog_scene" unique_id=823823946]
 layout_mode = 0
 offset_top = 896.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qwlju")
 
-[node name="Dialog_text" type="RichTextLabel" parent="Dialog_scene/Dialog_window"]
+[node name="Dialog_text" type="RichTextLabel" parent="Dialog_scene/Dialog_window" unique_id=605700162]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("11_1e2th")
 theme_override_font_sizes/normal_font_size = 25
@@ -398,7 +398,7 @@ bbcode_enabled = true
 text = "Очнувшись вы оказались в лесу и перед собой вы видите двух охранников что-то обсуждающих"
 scroll_active = false
 
-[node name="Next_dialog_phrase" type="Button" parent="Dialog_scene/Dialog_window"]
+[node name="Next_dialog_phrase" type="Button" parent="Dialog_scene/Dialog_window" unique_id=1378236920]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
 theme_override_colors/font_focus_color = Color(0.8745098, 0.8745098, 0.8745098, 0)

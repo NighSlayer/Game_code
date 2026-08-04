@@ -2097,7 +2097,7 @@ func _on_talk_button_pressed():
 
 func _on_slave_social_status_button_pressed():
 	call_slave.condition.loyalty += 1
-	pass
+	_on_actions_pressed()
 
 func dialog_window(action):
 	match(action):
