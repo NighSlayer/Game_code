@@ -1,0 +1,341 @@
+[gd_scene load_steps=12 format=3 uid="uid://b6cyrxklo614b"]
+
+[ext_resource type="Script" path="res://gd/brothel.gd" id="1_a1f5f"]
+[ext_resource type="Texture2D" uid="uid://cjjor27jq5771" path="res://GameData/img/Game/Places/Brothel/Владелица борделя.jpg" id="1_g615e"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_yb46t"]
+[ext_resource type="Texture2D" uid="uid://jgyujn21t5tg" path="res://GameData/img/Game/Interface/Область для галочки.png" id="3_0ysye"]
+[ext_resource type="Texture2D" uid="uid://6wa2xey6k84o" path="res://GameData/img/Game/Interface/Галочка.png" id="4_s3i8f"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="5_d02ex"]
+[ext_resource type="Texture2D" uid="uid://bml0i3kmmieu7" path="res://GameData/img/Main menu/Настройки.png" id="7_yfmwo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syxes"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ny6t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xhsr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edm50"]
+
+[node name="Brothel" type="Node2D"]
+script = ExtResource("1_a1f5f")
+
+[node name="Brothel" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_g615e")
+
+[node name="Give_slaves_to_panel" type="Button" parent="Brothel"]
+offset_left = -768.0
+offset_top = -336.0
+offset_right = -480.0
+offset_bottom = -240.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Отправить рабов
+на панель"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Give_slaves_to_panel"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Talk" type="Button" parent="Brothel"]
+offset_left = -768.0
+offset_top = -216.0
+offset_right = -480.0
+offset_bottom = -120.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Зайти в бордель"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Talk"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Exit_the_brothel" type="Button" parent="Brothel"]
+offset_left = -768.0
+offset_top = -96.0
+offset_right = -480.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Выйти из борделя"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Exit_the_brothel"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Give_slave1" type="Button" parent="Brothel"]
+visible = false
+offset_left = -768.0
+offset_top = -336.0
+offset_right = -480.0
+offset_bottom = -240.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Отдать 1 раба"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Give_slave1"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Checkbox_slave1" type="TextureRect" parent="Brothel/Give_slave1"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 24.0
+offset_right = 384.0
+offset_bottom = 72.0
+texture = ExtResource("3_0ysye")
+expand_mode = 1
+
+[node name="Checkmark_slave1" type="TextureRect" parent="Brothel/Give_slave1/Checkbox_slave1"]
+visible = false
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 48.0
+texture = ExtResource("4_s3i8f")
+expand_mode = 1
+
+[node name="Give_slave2" type="Button" parent="Brothel"]
+visible = false
+offset_left = -768.0
+offset_top = -216.0
+offset_right = -480.0
+offset_bottom = -120.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Отдать 2 раба"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Give_slave2"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Checkbox_slave2" type="TextureRect" parent="Brothel/Give_slave2"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 24.0
+offset_right = 384.0
+offset_bottom = 72.0
+texture = ExtResource("3_0ysye")
+expand_mode = 1
+
+[node name="Checkmark_slave2" type="TextureRect" parent="Brothel/Give_slave2/Checkbox_slave2"]
+visible = false
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 48.0
+texture = ExtResource("4_s3i8f")
+expand_mode = 1
+
+[node name="Give_slave3" type="Button" parent="Brothel"]
+visible = false
+offset_left = -768.0
+offset_top = -96.0
+offset_right = -480.0
+offset_bottom = 3.05176e-05
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Отдать 3 раба"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Give_slave3"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Checkbox_slave3" type="TextureRect" parent="Brothel/Give_slave3"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 24.0
+offset_right = 384.0
+offset_bottom = 72.0
+texture = ExtResource("3_0ysye")
+expand_mode = 1
+
+[node name="Checkmark_slave3" type="TextureRect" parent="Brothel/Give_slave3/Checkbox_slave3"]
+visible = false
+layout_mode = 1
+offset_right = 72.0
+offset_bottom = 48.0
+texture = ExtResource("4_s3i8f")
+expand_mode = 1
+
+[node name="Confirm" type="Button" parent="Brothel"]
+visible = false
+offset_left = -768.0
+offset_top = 324.0
+offset_right = -480.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Подтвердить"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Confirm"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="Brothel"]
+visible = false
+offset_left = -768.0
+offset_top = 24.0
+offset_right = -480.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_syxes")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ny6t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8xhsr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edm50")
+text = "Назад"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yb46t")
+expand_mode = 1
+
+[node name="Dialog" type="RichTextLabel" parent="Brothel"]
+offset_left = 480.0
+offset_top = -348.0
+offset_right = 864.0
+offset_bottom = 324.0
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Dialog"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_d02ex")
+expand_mode = 1
+
+[node name="Settings" type="Button" parent="Brothel"]
+offset_left = 780.0
+offset_top = -444.0
+offset_right = 864.0
+offset_bottom = -372.0
+
+[node name="TextureRect" type="TextureRect" parent="Brothel/Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_yfmwo")
+expand_mode = 1
+
+[connection signal="pressed" from="Brothel/Give_slaves_to_panel" to="." method="_on_give_slaves_to_panel_pressed"]
+[connection signal="pressed" from="Brothel/Exit_the_brothel" to="." method="_on_exit_the_brothel_pressed"]
+[connection signal="pressed" from="Brothel/Give_slave1" to="." method="_on_give_slave_1_pressed"]
+[connection signal="pressed" from="Brothel/Give_slave2" to="." method="_on_give_slave_2_pressed"]
+[connection signal="pressed" from="Brothel/Give_slave3" to="." method="_on_give_slave_3_pressed"]
+[connection signal="pressed" from="Brothel/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Brothel/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Brothel/Settings" to="." method="_on_settings_pressed"]

@@ -1,0 +1,419 @@
+[gd_scene load_steps=25 format=3 uid="uid://vsmtkh8o1o6r"]
+
+[ext_resource type="Script" path="res://gd/animal_farm.gd" id="1_dcg8s"]
+[ext_resource type="Texture2D" uid="uid://c81snxymdpdo7" path="res://GameData/img/Game/Places/Suburb_district/Публичная звероферма/Публичная ферма.jpg" id="1_hewt7"]
+[ext_resource type="Texture2D" uid="uid://ghrk8xr3dw4k" path="res://GameData/img/Game/Places/Suburb_district/Публичная звероферма/Фермер.png" id="3_2hhy6"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="4_mpo0q"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="5_y6y0a"]
+[ext_resource type="FontFile" uid="uid://chiisg5vx8gla" path="res://GameData/Fonts/Второстепенные персонажи.ttf" id="6_boqgq"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="7_ju3i2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04d4g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_juntm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_41hbl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6jnqq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yiegc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl4ih"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbjsw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6bomh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pllb2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5mlk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ro8ux"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7qm2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5b1gr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uo5m7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_apafi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qc1ig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8lta"]
+
+[node name="Animal_farm" type="Node2D"]
+script = ExtResource("1_dcg8s")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_hewt7")
+
+[node name="Fermer" type="TextureRect" parent="."]
+offset_left = 576.0
+offset_top = 96.0
+offset_right = 1344.0
+offset_bottom = 936.0
+size_flags_vertical = 0
+texture = ExtResource("3_2hhy6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Actions" type="VBoxContainer" parent="."]
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_constants/separation = 25
+
+[node name="Work" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 90)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Отдать рабыню на работу"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Work"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Give_slave" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Предложить рабыню"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Give_slave"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Question" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Задать вопрос"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Question"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Выйти"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Work" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_constants/separation = 25
+
+[node name="Clear_barn" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Подметать хлев"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Clear_barn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Appease_livestock" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Ублажать скот"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Appease_livestock"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Attract_visitors" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Привлекать посетителей"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Attract_visitors"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Feed_livestock" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Кормить скот"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Feed_livestock"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_04d4g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_juntm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_41hbl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6jnqq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yiegc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gl4ih")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbjsw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6bomh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pllb2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5mlk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ro8ux")
+text = "Назад"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[node name="Dialog" type="RichTextLabel" parent="."]
+offset_left = 576.0
+offset_top = 936.0
+offset_right = 1344.0
+offset_bottom = 1080.0
+theme_override_fonts/normal_font = ExtResource("6_boqgq")
+theme_override_font_sizes/normal_font_size = 30
+text = "Здарова, ты что-то хотел?"
+
+[node name="Texture" type="TextureRect" parent="Dialog"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_ju3i2")
+expand_mode = 1
+
+[node name="Picture_work" type="TextureRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+expand_mode = 1
+
+[node name="Choose_slave" type="ScrollContainer" parent="."]
+visible = false
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Choose_slave"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Choose_slave/VBoxContainer"]
+custom_minimum_size = Vector2(384, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_mpo0q")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u7qm2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b1gr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uo5m7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_apafi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qc1ig")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p8lta")
+toggle_mode = true
+text = "Назад"
+
+[node name="Background" type="TextureRect" parent="Choose_slave/VBoxContainer/Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y6y0a")
+expand_mode = 1
+
+[connection signal="pressed" from="Actions/Work" to="." method="_on_work_pressed"]
+[connection signal="pressed" from="Actions/Give_slave" to="." method="_on_give_slave_pressed"]
+[connection signal="pressed" from="Actions/Question" to="." method="_on_question_pressed"]
+[connection signal="pressed" from="Actions/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Work/Clear_barn" to="." method="_on_clear_barn_pressed"]
+[connection signal="pressed" from="Work/Appease_livestock" to="." method="_on_appease_livestock_pressed"]
+[connection signal="pressed" from="Work/Attract_visitors" to="." method="_on_attract_visitors_pressed"]
+[connection signal="pressed" from="Work/Feed_livestock" to="." method="_on_feed_livestock_pressed"]
+[connection signal="pressed" from="Work/Back" to="." method="_on_back_work_pressed"]
+[connection signal="pressed" from="Choose_slave/VBoxContainer/Back" to="." method="_on_back_choose_slave_pressed"]

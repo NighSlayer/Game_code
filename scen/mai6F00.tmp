@@ -1,0 +1,65 @@
+[gd_scene load_steps=13 format=3 uid="uid://ddlttv56ip3lx"]
+
+[ext_resource type="Script" path="res://gd/main_menu.gd" id="1_tagku"]
+[ext_resource type="Texture2D" uid="uid://clx81k5qy7miv" path="res://GameData/img/Main menu/Baackground.jpg" id="2_uyeam"]
+[ext_resource type="Texture2D" uid="uid://bwffdyu571pxt" path="res://GameData/img/Main menu/Start game.jpg" id="3_blnum"]
+[ext_resource type="Texture2D" uid="uid://chx8myloumft7" path="res://GameData/img/Main menu/Screen size.png" id="4_geiox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcvb7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ln0x3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yd12a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sbcno"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v84g3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7vms"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqfwr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyo34"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_tagku")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.898039)
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("2_uyeam")
+
+[node name="Start_game" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 558.5
+offset_top = 560.0
+offset_right = 721.5
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bcvb7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ln0x3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yd12a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sbcno")
+icon = ExtResource("3_blnum")
+flat = true
+expand_icon = true
+
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_left = 760.0
+offset_top = 560.0
+offset_right = 856.0
+offset_bottom = 648.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v84g3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y7vms")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yqfwr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hyo34")
+icon = ExtResource("4_geiox")
+expand_icon = true
+
+[connection signal="pressed" from="Start_game" to="." method="_on_start_game_pressed"]

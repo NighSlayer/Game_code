@@ -1,0 +1,1104 @@
+[gd_scene load_steps=25 format=3 uid="uid://dtkbv1acr0r0j"]
+
+[ext_resource type="Script" uid="uid://bublm66tnfgcd" path="res://gd/stats_main_hero.gd" id="1_dp0yu"]
+[ext_resource type="Texture2D" uid="uid://dvqeseek6ll8l" path="res://GameData/img/Main menu/Экран настройки персонажа.png" id="2_d5a21"]
+[ext_resource type="Texture2D" uid="uid://dks2488qdvpbv" path="res://GameData/img/Game/Character/Characters_variants/Man/16.jpg" id="3_ojqcn"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="3_xb3k6"]
+[ext_resource type="Texture2D" uid="uid://xumc1r7lkh8i" path="res://GameData/img/Game/Character/Метка главного героя.png" id="4_jdyeg"]
+[ext_resource type="Texture2D" uid="uid://br45861mtk3rx" path="res://GameData/img/Game/Character/Hand_emblems/1.png" id="5_76syx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ig6t5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlvu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tonmt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv00v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ah6uo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydgsv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqtcx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dpsrn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj6wr"]
+bg_color = Color(100, 0.6, 0.6, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3ft0"]
+bg_color = Color(0.6, 100, 0.6, 1)
+corner_radius_top_left = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7lx5"]
+bg_color = Color(100, 0.6, 0.6, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n38a2"]
+bg_color = Color(0.6, 100, 0.6, 1)
+corner_radius_top_left = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0325j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnlv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xjqa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t1fk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6d4mw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yf7ll"]
+
+[node name="Stats_main_hero" type="Node2D"]
+top_level = true
+script = ExtResource("1_dp0yu")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_d5a21")
+expand_mode = 1
+
+[node name="Icon_main_hero" type="TextureRect" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 147.0
+offset_bottom = 144.0
+texture = ExtResource("3_ojqcn")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 616.0
+offset_top = 448.0
+offset_right = 656.0
+offset_bottom = 480.0
+
+[node name="Hand" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 256.0
+offset_right = 1280.0
+offset_bottom = 512.0
+texture = ExtResource("4_jdyeg")
+expand_mode = 1
+
+[node name="Name_main_hero" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1112.0
+offset_top = 480.0
+offset_right = 1209.0
+offset_bottom = 503.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "12345678910
+"
+horizontal_alignment = 1
+
+[node name="Emblem" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1128.0
+offset_top = 416.0
+offset_right = 1199.0
+offset_bottom = 480.0
+texture = ExtResource("5_76syx")
+expand_mode = 1
+
+[node name="Stats" type="PanelContainer" parent="."]
+offset_left = 280.0
+offset_right = 1600.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ig6t5")
+
+[node name="GridContainer" type="GridContainer" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 0
+columns = 4
+
+[node name="Main_stats" type="VBoxContainer" parent="Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Health" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Здоровье"
+alignment = 0
+
+[node name="Endurance" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Выносливость"
+alignment = 0
+
+[node name="Charisma" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Харизматичность"
+alignment = 0
+
+[node name="Beauty" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Красота"
+alignment = 0
+
+[node name="Libido" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Либидо"
+alignment = 0
+
+[node name="Mark" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Известность клейма"
+alignment = 0
+
+[node name="Reputation" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Репутация"
+alignment = 0
+
+[node name="Quality_of_life" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Уровень жизни"
+alignment = 0
+
+[node name="Hygiene" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Гигиена"
+alignment = 0
+
+[node name="Mood" type="Button" parent="Stats/GridContainer/Main_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Настроение"
+alignment = 0
+
+[node name="Main_stats_text" type="VBoxContainer" parent="Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Health_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Endurance_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Charisma_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Beauty_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Libido_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Mark_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Reputation_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Quality_of_life_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Hygiene_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Mood_text" type="Label" parent="Stats/GridContainer/Main_stats_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Skills" type="VBoxContainer" parent="Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Mentor" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Наставничество"
+alignment = 0
+
+[node name="Steward" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Дворецкий"
+alignment = 0
+
+[node name="Art_director" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Арт-директор"
+alignment = 0
+
+[node name="Medic" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Медик"
+alignment = 0
+
+[node name="Combat_training" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Боевая подготовка"
+alignment = 0
+
+[node name="Magician" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Маг"
+alignment = 0
+
+[node name="Petting" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Петтинг"
+alignment = 0
+
+[node name="Oral_sex" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Оральный секс"
+alignment = 0
+
+[node name="Penetration" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Пенетрация"
+alignment = 0
+
+[node name="Fetishism" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Фетишизм"
+alignment = 0
+
+[node name="Dominance" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Доминирование"
+alignment = 0
+
+[node name="Tortue" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Пытки"
+alignment = 0
+
+[node name="Spanking" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Порка"
+alignment = 0
+
+[node name="Binding" type="Button" parent="Stats/GridContainer/Skills"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rlvu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tonmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jv00v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ah6uo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ydgsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqtcx")
+text = "Связывание"
+alignment = 0
+
+[node name="Skills_text" type="VBoxContainer" parent="Stats/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Mentor_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Steward_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Art_director_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Medic_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Fighter_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Magician_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Binding_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Dominance_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Tortue_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Spanking_text" type="Label" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Petting_picture" type="TextureRect" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Oral_sex_picture" type="TextureRect" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Penetration_picture" type="TextureRect" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Fetishism_picture" type="TextureRect" parent="Stats/GridContainer/Skills_text"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Reputation" type="PanelContainer" parent="."]
+visible = false
+offset_left = 280.0
+offset_right = 1600.0
+offset_bottom = 1072.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dpsrn")
+
+[node name="GridContainer" type="GridContainer" parent="Reputation"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 100
+columns = 2
+
+[node name="Information_reputations" type="Label" parent="Reputation/GridContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Уровень доверия фракции"
+horizontal_alignment = 1
+
+[node name="Information_influence" type="Label" parent="Reputation/GridContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Влияние фракций в районах"
+horizontal_alignment = 1
+
+[node name="Reputations_group" type="HBoxContainer" parent="Reputation/GridContainer"]
+layout_mode = 2
+
+[node name="Reputations_groups_text" type="VBoxContainer" parent="Reputation/GridContainer/Reputations_group"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Rich_text" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_groups_text"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Богачи"
+
+[node name="Guards_text" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_groups_text"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Стража"
+
+[node name="Merchants_text" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_groups_text"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Купцы"
+
+[node name="Beggars_text" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_groups_text"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Нищие"
+
+[node name="Bandits_text" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_groups_text"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Бандиты"
+
+[node name="Reputations_group_progress_bar" type="VBoxContainer" parent="Reputation/GridContainer/Reputations_group"]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Rich_progress_bar" type="ProgressBar" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_uj6wr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a3ft0")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar/Rich_progress_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Подозрительность"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Guards_progress_bar" type="ProgressBar" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_uj6wr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a3ft0")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar/Guards_progress_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Подозрительность"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Merchants_progress_bar" type="ProgressBar" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_uj6wr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a3ft0")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar/Merchants_progress_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Подозрительность"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Beggars_progress_bar" type="ProgressBar" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_uj6wr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a3ft0")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar/Beggars_progress_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Подозрительность"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bandits_progress_bar" type="ProgressBar" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_uj6wr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a3ft0")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Reputations_group/Reputations_group_progress_bar/Bandits_progress_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Подозрительность"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Group_influence" type="HBoxContainer" parent="Reputation/GridContainer"]
+layout_mode = 2
+
+[node name="District_text" type="VBoxContainer" parent="Reputation/GridContainer/Group_influence"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Elite_district" type="Label" parent="Reputation/GridContainer/Group_influence/District_text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Элитный район"
+
+[node name="Rich_district" type="Label" parent="Reputation/GridContainer/Group_influence/District_text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Богатый район"
+
+[node name="Merchant_district" type="Label" parent="Reputation/GridContainer/Group_influence/District_text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Купеческий район"
+
+[node name="Buisness_district" type="Label" parent="Reputation/GridContainer/Group_influence/District_text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Деловой район"
+
+[node name="Poor_district" type="Label" parent="Reputation/GridContainer/Group_influence/District_text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Бедный район"
+
+[node name="Slum_district" type="Label" parent="Reputation/GridContainer/Group_influence/District_text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Трущобы"
+
+[node name="Suburb_district" type="Label" parent="Reputation/GridContainer/Group_influence/District_text"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Пригород"
+
+[node name="District_progress_bar" type="VBoxContainer" parent="Reputation/GridContainer/Group_influence"]
+layout_mode = 2
+theme_override_constants/separation = 33
+alignment = 1
+
+[node name="Elite_district" type="ProgressBar" parent="Reputation/GridContainer/Group_influence/District_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Group_influence/District_progress_bar/Elite_district"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Богачи/Стража"
+horizontal_alignment = 1
+
+[node name="Rich_district" type="ProgressBar" parent="Reputation/GridContainer/Group_influence/District_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Group_influence/District_progress_bar/Rich_district"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Богачи/Купцы  "
+horizontal_alignment = 1
+
+[node name="Merchant_district" type="ProgressBar" parent="Reputation/GridContainer/Group_influence/District_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Group_influence/District_progress_bar/Merchant_district"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = " Купцы/Стража"
+horizontal_alignment = 1
+
+[node name="Buisness_district" type="ProgressBar" parent="Reputation/GridContainer/Group_influence/District_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Group_influence/District_progress_bar/Buisness_district"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = " Купцы/Нищие"
+horizontal_alignment = 1
+
+[node name="Poor_district" type="ProgressBar" parent="Reputation/GridContainer/Group_influence/District_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Group_influence/District_progress_bar/Poor_district"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Нищие/Стража"
+horizontal_alignment = 1
+
+[node name="Slum_district" type="ProgressBar" parent="Reputation/GridContainer/Group_influence/District_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Group_influence/District_progress_bar/Slum_district"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "   Нищие/Бандиты"
+horizontal_alignment = 1
+
+[node name="Suburb_district" type="ProgressBar" parent="Reputation/GridContainer/Group_influence/District_progress_bar"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Group_influence/District_progress_bar/Suburb_district"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Богачи/Стража"
+horizontal_alignment = 1
+
+[node name="Progress_build_village" type="VBoxContainer" parent="Reputation/GridContainer"]
+layout_mode = 2
+
+[node name="Scorched_earth_text" type="Label" parent="Reputation/GridContainer/Progress_build_village"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Уровень постройки поселения"
+
+[node name="Scorched_earth" type="ProgressBar" parent="Reputation/GridContainer/Progress_build_village"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h7lx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n38a2")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Reputation/GridContainer/Progress_build_village/Scorched_earth"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.545098, 1)
+theme_override_font_sizes/font_size = 15
+text = "Стража"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 40)
+offset_left = 64.0
+offset_top = 600.0
+offset_right = 192.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0325j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cnlv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5xjqa")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4t1fk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6d4mw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yf7ll")
+text = "Назад"
+
+[node name="TextureRect" type="TextureRect" parent="Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xb3k6")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 576.0
+theme_override_constants/separation = 25
+
+[node name="Show_stats" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0325j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cnlv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5xjqa")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4t1fk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6d4mw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yf7ll")
+text = "Статы"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Show_stats"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xb3k6")
+expand_mode = 1
+
+[node name="Show_reputation" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0325j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cnlv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5xjqa")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4t1fk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6d4mw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yf7ll")
+text = "Репутация"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Show_reputation"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xb3k6")
+expand_mode = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Show_stats" to="." method="_on_show_stats_pressed"]
+[connection signal="pressed" from="VBoxContainer/Show_reputation" to="." method="_on_show_reputation_pressed"]

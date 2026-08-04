@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bycj32npgal1i"]
+
+[ext_resource type="Script" uid="uid://diyg1hin6jydf" path="res://gd/MusicController.gd" id="1_v62wq"]
+[ext_resource type="AudioStream" uid="uid://bdvbc7htxqk6v" path="res://GameData/snd/Game/Дверь.mp3" id="2_1fomm"]
+[ext_resource type="AudioStream" uid="uid://dtgnmou7llg5y" path="res://GameData/snd/SE/Press button.ogg" id="3_rx8rb"]
+[ext_resource type="AudioStream" uid="uid://cnohct2v0esb" path="res://GameData/snd/Game/Mini-game/Correct.mp3" id="8_rnqwe"]
+[ext_resource type="AudioStream" uid="uid://drjr456b0havh" path="res://GameData/snd/Game/Mini-game/Incorrect.mp3.mp3" id="9_5rrhn"]
+[ext_resource type="AudioStream" uid="uid://dnhn5w8av4qw1" path="res://GameData/snd/Game/Interface/Нажатия на клавишу.mp3" id="10_vdnwg"]
+
+[node name="MusicController" type="Node"]
+script = ExtResource("1_v62wq")
+
+[node name="Steps" type="AudioStreamPlayer" parent="."]
+
+[node name="Placemusic" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[node name="Door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1fomm")
+
+[node name="Character_voice" type="AudioStreamPlayer" parent="."]
+
+[node name="Press_sound_buttons" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rx8rb")
+
+[node name="Mini-game_correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_rnqwe")
+volume_db = -10.0
+pitch_scale = 2.0
+max_polyphony = 9
+
+[node name="Mini-game_incorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_5rrhn")
+volume_db = -15.0
+
+[node name="Click_buttons" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_vdnwg")
+
+[connection signal="finished" from="Door" to="." method="_on_door_finished"]

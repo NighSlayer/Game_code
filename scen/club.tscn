@@ -1,0 +1,157 @@
+[gd_scene load_steps=10 format=3 uid="uid://nbrk05t7f77u"]
+
+[ext_resource type="Texture2D" uid="uid://cv7l63wjuqywu" path="res://GameData/img/Game/Places/Elite_district/Клуб/Стритиз клуб.jpg" id="1_ik78j"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_tcvc7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ywobb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rqob3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prqxd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8vfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5lsxt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r7eaf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlj4w"]
+
+[node name="Club" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_ik78j")
+expand_mode = 1
+
+[node name="Actions" type="PanelContainer" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ywobb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Actions"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Striptease_performance" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rqob3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_prqxd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u8vfo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7eaf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hlj4w")
+text = "Посмотреть стриптиз выступление"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Striptease_performance"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tcvc7")
+expand_mode = 1
+
+[node name="Order_food" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rqob3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_prqxd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u8vfo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7eaf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hlj4w")
+text = "Заказать поесть"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Order_food"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tcvc7")
+expand_mode = 1
+
+[node name="Owner_preferences" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rqob3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_prqxd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u8vfo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7eaf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hlj4w")
+text = "Узнать предпочтения у владельца"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Owner_preferences"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tcvc7")
+expand_mode = 1
+
+[node name="Offer_slave" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rqob3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_prqxd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u8vfo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7eaf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hlj4w")
+text = "Предложить рабыню"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Offer_slave"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tcvc7")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rqob3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_prqxd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_u8vfo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7eaf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hlj4w")
+text = "Выйти"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tcvc7")
+expand_mode = 1

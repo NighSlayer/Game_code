@@ -1,0 +1,269 @@
+[gd_scene load_steps=8 format=3 uid="uid://klvde7yiyoc1"]
+
+[ext_resource type="Script" path="res://gd/mini_game.gd" id="1_hvqli"]
+[ext_resource type="Texture2D" uid="uid://be6xikb3sffoa" path="res://GameData/img/Game/Interface/Mini-game/Мини-игра.png" id="2_gnd3g"]
+[ext_resource type="Texture2D" uid="uid://d1kx3qo1d0w7b" path="res://GameData/img/Game/Interface/Mini-game/Место нажатия.png" id="3_dfyqy"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="4_b281k"]
+[ext_resource type="AudioStream" uid="uid://cl5lu6c64qgnj" path="res://GameData/snd/Game/Mini-game/Coundowm.mp3" id="5_3hai6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4h8j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfmxl"]
+
+[node name="Mini_game" type="Node2D"]
+script = ExtResource("1_hvqli")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(384, 384)
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 512.0
+texture = ExtResource("2_gnd3g")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect"]
+layout_mode = 1
+offset_right = 384.0
+offset_bottom = 384.0
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 3
+
+[node name="Map_q" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_q"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_q"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+expand_mode = 1
+
+[node name="Map_w" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(122, 125)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_w"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_dfyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_w"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "1"
+horizontal_alignment = 1
+
+[node name="Map_e" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_e"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_dfyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_e"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "2"
+horizontal_alignment = 1
+
+[node name="Map_a" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(125, 122)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_a"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_dfyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_a"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "3"
+horizontal_alignment = 1
+
+[node name="Map_s" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(122, 122)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_s"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_dfyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_s"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "4"
+horizontal_alignment = 1
+
+[node name="Map_d" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(125, 122)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_d"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_dfyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_d"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 1
+
+[node name="Map_z" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_z"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_z"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "6"
+horizontal_alignment = 1
+
+[node name="Map_x" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(122, 125)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_x"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_dfyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_x"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "7"
+horizontal_alignment = 1
+
+[node name="Map_c" type="PanelContainer" parent="TextureRect/GridContainer"]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4h8j")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer/Map_c"]
+custom_minimum_size = Vector2(99, 99)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("3_dfyqy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/GridContainer/Map_c"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "8"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Score" type="Label" parent="."]
+offset_left = 805.0
+offset_top = 89.0
+offset_right = 845.0
+offset_bottom = 112.0
+
+[node name="Time_left" type="Label" parent="."]
+offset_left = 347.0
+offset_top = 89.0
+offset_right = 387.0
+offset_bottom = 112.0
+
+[node name="Play_mini_game_time" type="Timer" parent="."]
+
+[node name="Final_score" type="PanelContainer" parent="."]
+visible = false
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lfmxl")
+
+[node name="TextureRect2" type="TextureRect" parent="Final_score"]
+layout_mode = 2
+texture = ExtResource("4_b281k")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Final_score"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Final_score/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Финальный счёт"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Final_score/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="Countdown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3hai6")
+bus = &"Sfx"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Play_mini_game_time" to="." method="_on_play_mini_game_time_timeout"]

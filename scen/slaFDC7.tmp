@@ -1,0 +1,434 @@
+[gd_scene load_steps=28 format=3 uid="uid://cup8tyvheti0w"]
+
+[ext_resource type="Script" path="res://gd/slave_auction.gd" id="1_5ejws"]
+[ext_resource type="Texture2D" uid="uid://c1yi6duw5hua5" path="res://GameData/img/Game/Places/Rich_district/Аукционный дом/Сцена/4.jpg" id="2_25a0c"]
+[ext_resource type="AudioStream" uid="uid://2vyqhsqax13h" path="res://GameData/snd/Game/Slave auction/Удар судьи.mp3" id="2_veikb"]
+[ext_resource type="AudioStream" uid="uid://bi5k1bibstpvu" path="res://GameData/snd/Game/Slave auction/Шум толпы.ogg" id="3_57nti"]
+[ext_resource type="Texture2D" uid="uid://d4k5eh1uopjwy" path="res://GameData/img/Game/Interface/Задник для верхнего интерфейса.jpg" id="4_78ma2"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="4_rmacq"]
+[ext_resource type="FontFile" uid="uid://chiisg5vx8gla" path="res://GameData/Fonts/Второстепенные персонажи.ttf" id="5_grgb0"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="6_6kfx4"]
+[ext_resource type="Texture2D" uid="uid://bml0i3kmmieu7" path="res://GameData/img/Main menu/Настройки.png" id="8_0au3e"]
+[ext_resource type="Texture2D" uid="uid://dsxs8snt3ig3m" path="res://GameData/img/Game/Places/Rich_district/Аукционный дом/Сотрудник аукциона.png" id="8_8defn"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="10_5aclh"]
+[ext_resource type="Texture2D" uid="uid://b1ilw6qgm4hpu" path="res://GameData/img/Game/Interface/Плншет статов.jpg" id="10_pcbey"]
+[ext_resource type="FontFile" uid="uid://dw2wyvyf0ix74" path="res://GameData/Fonts/Текст параметров.ttf" id="12_552ej"]
+[ext_resource type="Texture2D" uid="uid://bvxkvikx7ejxm" path="res://GameData/img/Pic/boobs_A.jpg" id="12_tdtqd"]
+[ext_resource type="Texture2D" uid="uid://bqgme0flb41mw" path="res://GameData/img/Game/Interface/Image stats/Пизда вариант 1 со спермой.jpg" id="13_uwlyn"]
+[ext_resource type="Texture2D" uid="uid://cu0x4usttyhc4" path="res://GameData/img/Game/Interface/Image stats/Пизда вариант 6.jpg" id="14_ebgt0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_604cr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dytdq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hinvg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t15db"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_my37a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3ir3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tawct"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7s4qc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gtmm4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qux5r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j4cbr"]
+
+[node name="Slave_auction" type="Node2D"]
+script = ExtResource("1_5ejws")
+
+[node name="Lot_time" type="Timer" parent="."]
+
+[node name="Survey_bots" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Action" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_veikb")
+bus = &"Sfx"
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_57nti")
+volume_db = -15.0
+parameters/looping = true
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_25a0c")
+expand_mode = 1
+
+[node name="Slave" type="TextureRect" parent="."]
+offset_left = 576.0
+offset_top = 96.0
+offset_right = 1344.0
+offset_bottom = 936.0
+size_flags_vertical = 0
+texture = ExtResource("8_8defn")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Time_left_lot" type="Label" parent="."]
+visible = false
+offset_left = 792.0
+offset_right = 1136.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 22
+text = "Время до конца текущего лота
+"
+horizontal_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="Time_left_lot"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_78ma2")
+expand_mode = 1
+
+[node name="Dialog" type="RichTextLabel" parent="."]
+offset_left = 576.0
+offset_top = 936.0
+offset_right = 1344.0
+offset_bottom = 1080.0
+theme_override_fonts/normal_font = ExtResource("5_grgb0")
+theme_override_font_sizes/normal_font_size = 30
+text = "Здравствуйте, присаживаейтесь сейчас скоро всё начнётся"
+
+[node name="Texture" type="TextureRect" parent="Dialog"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_6kfx4")
+expand_mode = 1
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 1740.0
+offset_top = 96.0
+offset_right = 1824.0
+offset_bottom = 168.0
+
+[node name="TextureRect" type="TextureRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_0au3e")
+expand_mode = 1
+
+[node name="Actions" type="VBoxContainer" parent="."]
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_constants/separation = 25
+
+[node name="Start_auction" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_5aclh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_604cr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dytdq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hinvg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t15db")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_my37a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_t3ir3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tawct")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7s4qc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gtmm4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qux5r")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j4cbr")
+text = "Начать аукцион"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Start_auction"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rmacq")
+expand_mode = 1
+
+[node name="Raise" type="Button" parent="Actions"]
+visible = false
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_5aclh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_604cr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dytdq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hinvg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t15db")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_my37a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_t3ir3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tawct")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7s4qc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gtmm4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qux5r")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j4cbr")
+text = "Сделать ставку"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Raise"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rmacq")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_5aclh")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_604cr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dytdq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hinvg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t15db")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_my37a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_t3ir3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tawct")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7s4qc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gtmm4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qux5r")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j4cbr")
+text = "Выйти"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rmacq")
+expand_mode = 1
+
+[node name="Slave_stats" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1344.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Texture" type="TextureRect" parent="Slave_stats"]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 1080.0
+texture = ExtResource("10_pcbey")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Slave_stats"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 96.0
+offset_right = 540.0
+offset_bottom = 1040.0
+
+[node name="Boobs" type="HBoxContainer" parent="Slave_stats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Image" type="TextureRect" parent="Slave_stats/VBoxContainer/Boobs"]
+custom_minimum_size = Vector2(172.8, 144)
+layout_mode = 2
+texture = ExtResource("12_tdtqd")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Slave_stats/VBoxContainer/Boobs"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Size" type="Label" parent="Slave_stats/VBoxContainer/Boobs/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Размер груди"
+
+[node name="Lactation" type="Label" parent="Slave_stats/VBoxContainer/Boobs/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Лактация"
+
+[node name="Piercing" type="Label" parent="Slave_stats/VBoxContainer/Boobs/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Пирсинг"
+
+[node name="Modification" type="Label" parent="Slave_stats/VBoxContainer/Boobs/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Модификация"
+
+[node name="Pussy" type="HBoxContainer" parent="Slave_stats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Slave_stats/VBoxContainer/Pussy"]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="Slave_stats/VBoxContainer/Pussy/HBoxContainer"]
+custom_minimum_size = Vector2(172.8, 144)
+layout_mode = 2
+texture = ExtResource("13_uwlyn")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Slave_stats/VBoxContainer/Pussy"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Vagina" type="Label" parent="Slave_stats/VBoxContainer/Pussy/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Влагалище"
+
+[node name="Piercing" type="Label" parent="Slave_stats/VBoxContainer/Pussy/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Пирсинг"
+
+[node name="Modification" type="Label" parent="Slave_stats/VBoxContainer/Pussy/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Пирсинг"
+
+[node name="Anus" type="HBoxContainer" parent="Slave_stats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Image" type="TextureRect" parent="Slave_stats/VBoxContainer/Anus"]
+custom_minimum_size = Vector2(172.8, 144)
+layout_mode = 2
+texture = ExtResource("14_ebgt0")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Slave_stats/VBoxContainer/Anus"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Anus" type="Label" parent="Slave_stats/VBoxContainer/Anus/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Анус"
+
+[node name="Other_stats" type="VBoxContainer" parent="Slave_stats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Age" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Возраст"
+
+[node name="Mark" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Метка"
+
+[node name="Beauty" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Красота"
+
+[node name="Softness" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Нежность"
+
+[node name="Mindness" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Интеллект"
+
+[node name="Physique" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Телосложение"
+
+[node name="Personality" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Характер"
+
+[node name="Endurance" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Выносливость"
+
+[node name="Strength" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Сила"
+
+[node name="Agility" type="Label" parent="Slave_stats/VBoxContainer/Other_stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_552ej")
+theme_override_font_sizes/font_size = 25
+text = "Ловкость"
+
+[connection signal="timeout" from="Lot_time" to="." method="_on_lot_time_timeout"]
+[connection signal="timeout" from="Survey_bots" to="." method="_on_survey_bots_timeout"]
+[connection signal="pressed" from="Actions/Start_auction" to="." method="_on_start_auction_pressed"]
+[connection signal="pressed" from="Actions/Raise" to="." method="_on_raise_pressed"]
+[connection signal="pressed" from="Actions/Exit" to="." method="_on_exit_pressed"]

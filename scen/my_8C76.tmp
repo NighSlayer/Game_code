@@ -1,0 +1,1347 @@
+[gd_scene load_steps=35 format=3 uid="uid://cas27wheboc21"]
+
+[ext_resource type="Texture2D" uid="uid://t5rxvwig1751" path="res://GameData/img/Game/Places/Shop/Магазин.jpg" id="1_hgw4o"]
+[ext_resource type="Script" path="res://gd/my_shop.gd" id="1_ybnp5"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_ai0mn"]
+[ext_resource type="Texture2D" uid="uid://ewacwgowcp3a" path="res://GameData/img/Game/Interface/Стрелочка влево norm.png" id="4_kbv7a"]
+[ext_resource type="Texture2D" uid="uid://dae8dt1uhm7vm" path="res://GameData/img/Game/Interface/Стрелочка вправо norm.png" id="5_w0gmm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b8f3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_exfuw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iai2l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vggv8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_as5so"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aptfc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ckvo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_42wfa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2rxc1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8dnp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1jfb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p76qv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8avfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv4h8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qfbqo"]
+texture = ExtResource("4_kbv7a")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecyfx"]
+texture = ExtResource("4_kbv7a")
+modulate_color = Color(0.864675, 0.864675, 0.864675, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hi0k1"]
+texture = ExtResource("4_kbv7a")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g35v4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ppdv6"]
+texture = ExtResource("5_w0gmm")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tqvwr"]
+texture = ExtResource("5_w0gmm")
+modulate_color = Color(0.864675, 0.864675, 0.864675, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47rms"]
+texture = ExtResource("5_w0gmm")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmrly"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_osuk4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x51r6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehowa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_si8sk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eglr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m12t6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_av3aq"]
+
+[node name="My_shop" type="Node2D"]
+script = ExtResource("1_ybnp5")
+
+[node name="Backgroung" type="TextureRect" parent="."]
+offset_left = -8.0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_hgw4o")
+expand_mode = 1
+
+[node name="Main_menu_shop" type="PanelContainer" parent="."]
+visible = false
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b8f3k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main_menu_shop"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Open_shop" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_exfuw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iai2l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vggv8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_as5so")
+text = "Открыть магазин"
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Open_shop"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Personal" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_exfuw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iai2l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vggv8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_as5so")
+text = "Персонал"
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Personal"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Rules" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_exfuw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iai2l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vggv8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_as5so")
+text = "Правила"
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Rules"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Product" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_exfuw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iai2l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vggv8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_as5so")
+text = "Продукты"
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Product"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_exfuw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iai2l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vggv8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_as5so")
+text = "Выход"
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Personal" type="PanelContainer" parent="."]
+visible = false
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b8f3k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Personal"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Guards" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Охрана"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Guards"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Shopkeepers" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Продавцы"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Shopkeepers"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Storage_workers" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Складские работники"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Storage_workers"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Cleaners" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Уборщики"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Cleaners"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Back_personal" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Назад"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Back_personal"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Guards" type="VBoxContainer" parent="Personal"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Slave_1" type="Button" parent="Personal/Guards"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Guards/Slave_1"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_2" type="Button" parent="Personal/Guards"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 2"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Guards/Slave_2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_3" type="Button" parent="Personal/Guards"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 3"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Guards/Slave_3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_4" type="Button" parent="Personal/Guards"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 4"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Guards/Slave_4"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_5" type="Button" parent="Personal/Guards"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 5"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Guards/Slave_5"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_6" type="Button" parent="Personal/Guards"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 6"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Guards/Slave_6"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Switch_pages" type="HBoxContainer" parent="Personal/Guards"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Left" type="Button" parent="Personal/Guards/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jv4h8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qfbqo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ecyfx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hi0k1")
+expand_icon = true
+
+[node name="Right" type="Button" parent="Personal/Guards/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g35v4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ppdv6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tqvwr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_47rms")
+expand_icon = true
+
+[node name="Back_choose_guards" type="Button" parent="Personal/Guards"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Назад"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Guards/Back_choose_guards"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Shopkeepers" type="VBoxContainer" parent="Personal"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Slave_1" type="Button" parent="Personal/Shopkeepers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Shopkeepers/Slave_1"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_2" type="Button" parent="Personal/Shopkeepers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 2"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Shopkeepers/Slave_2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_3" type="Button" parent="Personal/Shopkeepers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 3"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Shopkeepers/Slave_3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_4" type="Button" parent="Personal/Shopkeepers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 4"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Shopkeepers/Slave_4"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_5" type="Button" parent="Personal/Shopkeepers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 5"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Shopkeepers/Slave_5"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_6" type="Button" parent="Personal/Shopkeepers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 6"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Shopkeepers/Slave_6"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Switch_pages" type="HBoxContainer" parent="Personal/Shopkeepers"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Left" type="Button" parent="Personal/Shopkeepers/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jv4h8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qfbqo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ecyfx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hi0k1")
+expand_icon = true
+
+[node name="Right" type="Button" parent="Personal/Shopkeepers/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g35v4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ppdv6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tqvwr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_47rms")
+expand_icon = true
+
+[node name="Back_choose_shopkeepers" type="Button" parent="Personal/Shopkeepers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Назад"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Shopkeepers/Back_choose_shopkeepers"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Storage_workers" type="VBoxContainer" parent="Personal"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Slave_1" type="Button" parent="Personal/Storage_workers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Storage_workers/Slave_1"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_2" type="Button" parent="Personal/Storage_workers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 2"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Storage_workers/Slave_2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_3" type="Button" parent="Personal/Storage_workers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 3"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Storage_workers/Slave_3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_4" type="Button" parent="Personal/Storage_workers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 4"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Storage_workers/Slave_4"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_5" type="Button" parent="Personal/Storage_workers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 5"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Storage_workers/Slave_5"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_6" type="Button" parent="Personal/Storage_workers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 6"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Storage_workers/Slave_6"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Switch_pages" type="HBoxContainer" parent="Personal/Storage_workers"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Left" type="Button" parent="Personal/Storage_workers/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jv4h8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qfbqo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ecyfx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hi0k1")
+expand_icon = true
+
+[node name="Right" type="Button" parent="Personal/Storage_workers/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g35v4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ppdv6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tqvwr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_47rms")
+expand_icon = true
+
+[node name="Back_choose_storage_workers" type="Button" parent="Personal/Storage_workers"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Назад"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Storage_workers/Back_choose_storage_workers"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Cleaners" type="VBoxContainer" parent="Personal"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Slave_1" type="Button" parent="Personal/Cleaners"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Cleaners/Slave_1"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_2" type="Button" parent="Personal/Cleaners"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 2"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Cleaners/Slave_2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_3" type="Button" parent="Personal/Cleaners"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 3"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Cleaners/Slave_3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_4" type="Button" parent="Personal/Cleaners"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 4"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Cleaners/Slave_4"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_5" type="Button" parent="Personal/Cleaners"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 5"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Cleaners/Slave_5"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Slave_6" type="Button" parent="Personal/Cleaners"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8dnp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r1jfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p76qv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8avfo")
+text = "Раб 6"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Cleaners/Slave_6"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Switch_pages" type="HBoxContainer" parent="Personal/Cleaners"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Left" type="Button" parent="Personal/Cleaners/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jv4h8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qfbqo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ecyfx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hi0k1")
+expand_icon = true
+
+[node name="Right" type="Button" parent="Personal/Cleaners/Switch_pages"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g35v4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ppdv6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tqvwr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_47rms")
+expand_icon = true
+
+[node name="Back_choose_cleaners" type="Button" parent="Personal/Cleaners"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aptfc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ckvo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42wfa")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2rxc1")
+text = "Назад"
+
+[node name="TextureRect" type="TextureRect" parent="Personal/Cleaners/Back_choose_cleaners"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Rules" type="PanelContainer" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b8f3k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rules"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Shift_time" type="Button" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xmrly")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_osuk4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x51r6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ehowa")
+text = "Время работы магазина"
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Shift_time"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="MenuButton" type="MenuButton" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Время работы магазина"
+icon_alignment = 1
+item_count = 2
+popup/item_0/text = "1 смена"
+popup/item_0/id = 1
+popup/item_1/text = "2 смена"
+popup/item_1/id = 1
+
+[node name="Button" type="Button" parent="Rules/VBoxContainer/MenuButton"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/MenuButton"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="PopupMenu" type="PopupMenu" parent="Rules/VBoxContainer/MenuButton"]
+item_count = 1
+item_0/text = "текст"
+
+[node name="Products_for_sale" type="Button" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xmrly")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_osuk4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x51r6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ehowa")
+text = "Товары для продажи"
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Products_for_sale"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Autobuy_products" type="Button" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xmrly")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_osuk4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x51r6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ehowa")
+text = "Автоматическое
+пополнение склада"
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Autobuy_products"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xmrly")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_osuk4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x51r6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ehowa")
+text = "Выход"
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Products" type="PanelContainer" parent="."]
+visible = false
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b8f3k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Products"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Meat" type="Button" parent="Products/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_si8sk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eglr3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m12t6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_av3aq")
+text = "Мясо"
+
+[node name="TextureRect" type="TextureRect" parent="Products/VBoxContainer/Meat"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Vegetables" type="Button" parent="Products/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_si8sk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eglr3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m12t6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_av3aq")
+text = "Овощи"
+
+[node name="TextureRect" type="TextureRect" parent="Products/VBoxContainer/Vegetables"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Fruits" type="Button" parent="Products/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_si8sk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eglr3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m12t6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_av3aq")
+text = "Фрукты"
+
+[node name="TextureRect" type="TextureRect" parent="Products/VBoxContainer/Fruits"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Spices" type="Button" parent="Products/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_si8sk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eglr3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m12t6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_av3aq")
+text = "Специи"
+
+[node name="TextureRect" type="TextureRect" parent="Products/VBoxContainer/Spices"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Pasta_products" type="Button" parent="Products/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_si8sk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eglr3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m12t6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_av3aq")
+text = "Макаронные изделия"
+
+[node name="TextureRect" type="TextureRect" parent="Products/VBoxContainer/Pasta_products"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Products/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_si8sk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eglr3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m12t6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_av3aq")
+text = "Выход"
+
+[node name="TextureRect" type="TextureRect" parent="Products/VBoxContainer/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ai0mn")
+expand_mode = 1
+
+[connection signal="pressed" from="Main_menu_shop/VBoxContainer/Open_shop" to="." method="_on_open_shop_pressed"]
+[connection signal="pressed" from="Main_menu_shop/VBoxContainer/Personal" to="." method="_on_personal_pressed"]
+[connection signal="pressed" from="Main_menu_shop/VBoxContainer/Rules" to="." method="_on_rules_pressed"]
+[connection signal="pressed" from="Main_menu_shop/VBoxContainer/Product" to="." method="_on_product_pressed"]
+[connection signal="pressed" from="Main_menu_shop/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Personal/VBoxContainer/Guards" to="." method="_on_guards_pressed"]
+[connection signal="pressed" from="Personal/VBoxContainer/Shopkeepers" to="." method="_on_shopkeepers_pressed"]
+[connection signal="pressed" from="Personal/VBoxContainer/Storage_workers" to="." method="_on_storage_workers_pressed"]
+[connection signal="pressed" from="Personal/VBoxContainer/Cleaners" to="." method="_on_cleaners_pressed"]
+[connection signal="pressed" from="Personal/VBoxContainer/Back_personal" to="." method="_on_back_personal_pressed"]
+[connection signal="pressed" from="Personal/Guards/Slave_1" to="." method="_on_slave_1_pressed"]
+[connection signal="pressed" from="Personal/Guards/Slave_2" to="." method="_on_slave_2_pressed"]
+[connection signal="pressed" from="Personal/Guards/Slave_3" to="." method="_on_slave_3_pressed"]
+[connection signal="pressed" from="Personal/Guards/Slave_4" to="." method="_on_slave_4_pressed"]
+[connection signal="pressed" from="Personal/Guards/Slave_5" to="." method="_on_slave_5_pressed"]
+[connection signal="pressed" from="Personal/Guards/Slave_6" to="." method="_on_slave_6_pressed"]
+[connection signal="pressed" from="Personal/Guards/Switch_pages/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Personal/Guards/Switch_pages/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Personal/Guards/Back_choose_guards" to="." method="_on_back_choose_guards_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Slave_1" to="." method="_on_slave_1_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Slave_2" to="." method="_on_slave_2_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Slave_3" to="." method="_on_slave_3_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Slave_4" to="." method="_on_slave_4_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Slave_5" to="." method="_on_slave_5_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Slave_6" to="." method="_on_slave_6_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Switch_pages/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Switch_pages/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Personal/Shopkeepers/Back_choose_shopkeepers" to="." method="_on_back_choose_shopkeepers_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Slave_1" to="." method="_on_slave_1_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Slave_2" to="." method="_on_slave_2_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Slave_3" to="." method="_on_slave_3_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Slave_4" to="." method="_on_slave_4_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Slave_5" to="." method="_on_slave_5_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Slave_6" to="." method="_on_slave_6_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Switch_pages/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Switch_pages/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Personal/Storage_workers/Back_choose_storage_workers" to="." method="_on_back_choose_storage_workers_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Slave_1" to="." method="_on_slave_1_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Slave_2" to="." method="_on_slave_2_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Slave_3" to="." method="_on_slave_3_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Slave_4" to="." method="_on_slave_4_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Slave_5" to="." method="_on_slave_5_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Slave_6" to="." method="_on_slave_6_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Switch_pages/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Switch_pages/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Personal/Cleaners/Back_choose_cleaners" to="." method="_on_back_choose_cleaners_pressed"]
+[connection signal="about_to_popup" from="Rules/VBoxContainer/MenuButton" to="." method="_on_menu_button_about_to_popup"]

@@ -1,0 +1,268 @@
+[gd_scene load_steps=18 format=3 uid="uid://dn3po24cxq0o6"]
+
+[ext_resource type="Script" uid="uid://cwsrvolnfv4pn" path="res://gd/Check_clothes.gd" id="1_v53ya"]
+[ext_resource type="Texture2D" uid="uid://cnstr0aubm377" path="res://GameData/img/Game/Places/Home/Шкаф с одеждой.png" id="2_pfo1t"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="3_0gahc"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="3_xjf0x"]
+[ext_resource type="Texture2D" uid="uid://b2c7e0dd4cfwt" path="res://GameData/img/Game/Interface/Фон бокового интерфейса.jpg" id="5_6f678"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6f678"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f86oa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ojcm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oun2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64mdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4kjer"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvsnu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p67k5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1fwd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1khgs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ctt0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r4u2k"]
+
+[node name="Check_clothes" type="Node2D"]
+script = ExtResource("1_v53ya")
+
+[node name="Wardrobe" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_pfo1t")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(384, 896)
+offset_left = 96.0
+offset_top = 128.0
+offset_right = 480.0
+offset_bottom = 1024.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6f678")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f86oa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4ojcm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oun2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_64mdk")
+text = "Назад"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0gahc")
+expand_mode = 1
+
+[node name="Status_clothes" type="TextureRect" parent="."]
+offset_left = 1280.0
+offset_top = 128.0
+offset_right = 1856.0
+offset_bottom = 1024.0
+texture = ExtResource("5_6f678")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PanelContainer" type="PanelContainer" parent="Status_clothes"]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 896.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4kjer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_clothes/PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Head" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "На голову"
+
+[node name="Ears" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "В уши"
+
+[node name="Neck" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "На шею"
+
+[node name="Body" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "На тело"
+
+[node name="Hands" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "На руки"
+
+[node name="Legs" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "На ноги"
+
+[node name="Foots" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "На стопы"
+
+[node name="Rings" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "Кольца"
+
+[node name="Toy" type="Button" parent="Status_clothes/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.6392157, 0.47843137, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("3_xjf0x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nvsnu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p67k5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d1fwd")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1khgs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ctt0")
+text = "Игрушки"
+
+[node name="Body_part_clothes" type="TextureRect" parent="."]
+offset_left = 640.0
+offset_top = 128.0
+offset_right = 1216.0
+offset_bottom = 1024.0
+texture = ExtResource("5_6f678")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PanelContainer" type="PanelContainer" parent="Body_part_clothes"]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 896.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r4u2k")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Body_part_clothes/PanelContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Head" to="." method="_on_check_body_part_pressed" binds= [0]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Ears" to="." method="_on_check_body_part_pressed" binds= [1]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Neck" to="." method="_on_check_body_part_pressed" binds= [2]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Body" to="." method="_on_check_body_part_pressed" binds= [3]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Hands" to="." method="_on_check_body_part_pressed" binds= [4]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Legs" to="." method="_on_check_body_part_pressed" binds= [5]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Foots" to="." method="_on_check_body_part_pressed" binds= [6]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Rings" to="." method="_on_check_body_part_pressed" binds= [7]]
+[connection signal="pressed" from="Status_clothes/PanelContainer/VBoxContainer/Toy" to="." method="_on_check_body_part_pressed" binds= [8]]

@@ -1,0 +1,533 @@
+[gd_scene load_steps=10 format=3 uid="uid://b74x8eoiwx3jr"]
+
+[ext_resource type="Script" path="res://gd/My_nightclub.gd" id="1_rvv7q"]
+[ext_resource type="Texture2D" uid="uid://cv7l63wjuqywu" path="res://GameData/img/Game/Places/Elite_district/Клуб/Стритиз клуб.jpg" id="2_3107w"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="3_3t0nv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r8uek"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_78c6a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qw4rf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7yysx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ut25t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_34n8m"]
+
+[node name="My_nightclub" type="Node2D"]
+script = ExtResource("1_rvv7q")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_3107w")
+expand_mode = 1
+
+[node name="Main_menu_shop" type="PanelContainer" parent="."]
+visible = false
+offset_left = 128.0
+offset_top = 120.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_r8uek")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main_menu_shop"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Open_nightclub" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Открыть заведение"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Open_nightclub"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Rules" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Правила заведения"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Rules"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Report_shift" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Отчёт за смену"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Report_shift"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Personal" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Персонал"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Personal"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Main_menu_shop/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Выйти"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_shop/VBoxContainer/Exit"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Personal" type="PanelContainer" parent="."]
+visible = false
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_34n8m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Personal"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Guards" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Охрана"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Guards"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Cooks" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Повара"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Cooks"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Waiters" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Официанты"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Waiters"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Strippers" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Стриптизёры"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Strippers"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="Personal/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Назад"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Personal/VBoxContainer/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Rules" type="PanelContainer" parent="."]
+visible = false
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_34n8m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rules"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Private" type="CheckButton" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Приватный танец"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Private"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Pawing" type="CheckButton" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Лапать"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Pawing"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Intim_services" type="CheckButton" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Интим услуги"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Intim_services"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Redeem" type="CheckButton" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Выкупить"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Redeem"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="Rules/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Назад"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Rules/VBoxContainer/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Intim_services" type="PanelContainer" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_34n8m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Intim_services"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Sex" type="Button" parent="Intim_services/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Секс"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Intim_services/VBoxContainer/Sex"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Cumshot" type="Button" parent="Intim_services/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Кончать внутрь"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Intim_services/VBoxContainer/Cumshot"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Redeem" type="Button" parent="Intim_services/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Выкуп"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Intim_services/VBoxContainer/Redeem"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Intim_services" type="Button" parent="Intim_services/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Инти услуги"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Intim_services/VBoxContainer/Intim_services"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="Intim_services/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78c6a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qw4rf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7yysx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ut25t")
+text = "Назад"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Intim_services/VBoxContainer/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3t0nv")
+expand_mode = 1

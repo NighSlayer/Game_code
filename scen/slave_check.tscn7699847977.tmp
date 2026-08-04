@@ -1,0 +1,534 @@
+[gd_scene load_steps=36 format=3 uid="uid://cf17gfhu5yxiu"]
+
+[ext_resource type="Script" uid="uid://b106jrbjqsiuc" path="res://gd/slave_check.gd" id="1_u5hfi"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_dwa6l"]
+[ext_resource type="Texture2D" uid="uid://blv60xju1t4jy" path="res://GameData/img/Game/Places/Home/Комната рабов.png" id="2_hoi2y"]
+[ext_resource type="Texture2D" uid="uid://b2c7e0dd4cfwt" path="res://GameData/img/Game/Interface/Фон бокового интерфейса.jpg" id="3_7nw48"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="4_7nw48"]
+[ext_resource type="Texture2D" uid="uid://ewacwgowcp3a" path="res://GameData/img/Game/Interface/Стрелочка влево norm.png" id="7_rfacy"]
+[ext_resource type="Texture2D" uid="uid://dae8dt1uhm7vm" path="res://GameData/img/Game/Interface/Стрелочка вправо norm.png" id="8_ghv2o"]
+[ext_resource type="Texture2D" uid="uid://bvxkvikx7ejxm" path="res://GameData/img/Pic/boobs_A.jpg" id="8_qwlju"]
+[ext_resource type="Texture2D" uid="uid://bsc8dl5whc1m0" path="res://GameData/img/Game/Girls/Body/Пизда/Надорвано/Пусто.jpg" id="9_6anof"]
+[ext_resource type="Texture2D" uid="uid://bml0i3kmmieu7" path="res://GameData/img/Main menu/Настройки.png" id="9_m67wb"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="10_7g8lm"]
+[ext_resource type="Texture2D" uid="uid://pvtpbsk56c4o" path="res://GameData/img/Game/Girls/Body/Матка/Беременность вариант 1.png" id="10_dviym"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ov0ey"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lm8b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_88lnx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ktaur"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xa32k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qokbc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4uwqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xylrg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qo18m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dh0ti"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2xnqn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6xl7n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2brl6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_607c1"]
+texture = ExtResource("7_rfacy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmv6j"]
+texture = ExtResource("7_rfacy")
+modulate_color = Color(0.864675, 0.864675, 0.864675, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qrueb"]
+texture = ExtResource("7_rfacy")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1dd3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3pcou"]
+texture = ExtResource("8_ghv2o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4npxd"]
+texture = ExtResource("8_ghv2o")
+modulate_color = Color(0.864675, 0.864675, 0.864675, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lf2q"]
+texture = ExtResource("8_ghv2o")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bf57c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s8oh3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfmwt"]
+texture = ExtResource("10_7g8lm")
+
+[node name="Slave_check" type="Node2D"]
+script = ExtResource("1_u5hfi")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_hoi2y")
+
+[node name="Full_slave" type="TextureRect" parent="."]
+offset_left = 488.0
+offset_top = 128.0
+offset_right = 1280.0
+offset_bottom = 1080.0
+stretch_mode = 6
+
+[node name="Status_slave" type="TextureRect" parent="."]
+offset_left = 1280.0
+offset_top = 128.0
+offset_right = 1856.0
+offset_bottom = 1024.0
+texture = ExtResource("3_7nw48")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Status_slave"]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 896.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ov0ey")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_slave/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Slave_name" type="Label" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Сакура"
+horizontal_alignment = 1
+
+[node name="Button_apperance" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Внешний вид"
+
+[node name="Button_anatomy" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_hover_color = Color(0.7816226, 0, 0.14723164, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Анатомия"
+
+[node name="Button_skills_common" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Навыки"
+
+[node name="Button_skills_sex" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.7411765, 0.07450981, 0.40392157, 1)
+theme_override_colors/font_hover_color = Color(0.78039217, 0, 0.14901961, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Интимные навыки"
+
+[node name="Button_clothes" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Одежда"
+
+[node name="Control" type="Control" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+
+[node name="Features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Особенности"
+
+[node name="First_features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+
+[node name="Second_features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+
+[node name="Third_features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+
+[node name="Actions" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Действия"
+
+[node name="Button_send_basement" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2lm8b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_88lnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ktaur")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xa32k")
+text = "Отправить в подвал"
+
+[node name="Slaves" type="PanelContainer" parent="."]
+offset_left = 96.0
+offset_top = 128.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qokbc")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Slaves"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Slaves/ScrollContainer"]
+custom_minimum_size = Vector2(392, 0)
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Back" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7nw48")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4uwqe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xylrg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qo18m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dh0ti")
+text = "Назад"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dwa6l")
+expand_mode = 1
+
+[node name="Slave_2" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2xnqn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xylrg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6xl7n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2brl6")
+text = "Рабыня 2"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Slave_2"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dwa6l")
+expand_mode = 1
+
+[node name="Slave_3" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2xnqn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xylrg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6xl7n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2brl6")
+text = "Рабыня 3"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Slave_3"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dwa6l")
+expand_mode = 1
+
+[node name="Slave_4" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2xnqn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xylrg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6xl7n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2brl6")
+text = "Рабыня 3"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Slave_4"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dwa6l")
+expand_mode = 1
+
+[node name="Slave_5" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2xnqn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xylrg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6xl7n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2brl6")
+text = "Рабыня 3"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Slave_5"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dwa6l")
+expand_mode = 1
+
+[node name="Slave_6" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2xnqn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xylrg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6xl7n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2brl6")
+text = "Рабыня 3"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Slaves/ScrollContainer/VBoxContainer/Slave_6"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dwa6l")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Slaves/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Left" type="Button" parent="Slaves/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_607c1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gmv6j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qrueb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p1dd3")
+expand_icon = true
+
+[node name="Right" type="Button" parent="Slaves/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_3pcou")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4npxd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5lf2q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bf57c")
+expand_icon = true
+
+[node name="Show_parametr" type="TextureRect" parent="."]
+offset_left = 640.0
+offset_top = 128.0
+offset_right = 1216.0
+offset_bottom = 1024.0
+texture = ExtResource("3_7nw48")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr"]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 896.0
+
+[node name="Name_parametr" type="Label" parent="Show_parametr/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Параметр"
+horizontal_alignment = 1
+
+[node name="Show_pictures" type="Button" parent="Show_parametr"]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 48.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s8oh3")
+toggle_mode = true
+
+[node name="Pictures" type="PanelContainer" parent="Show_parametr"]
+layout_mode = 0
+offset_left = -360.0
+offset_right = -64.0
+offset_bottom = 884.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Show_parametr/Pictures"]
+layout_mode = 2
+
+[node name="Boobs" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_qwlju")
+expand_mode = 5
+
+[node name="Anus" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_qwlju")
+expand_mode = 5
+
+[node name="Pussy" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_6anof")
+expand_mode = 5
+
+[node name="Pussy_in" type="TextureRect" parent="Show_parametr/Pictures/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_dviym")
+expand_mode = 5
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 1800.0
+offset_top = 64.0
+offset_right = 1856.0
+offset_bottom = 112.0
+
+[node name="TextureRect" type="TextureRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_m67wb")
+expand_mode = 1
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+oversampling_override = 1.0
+title = "Внимание!"
+position = Vector2i(515, 235)
+size = Vector2i(250, 250)
+max_size = Vector2i(250, 250)
+theme_override_styles/panel = SubResource("StyleBoxTexture_wfmwt")
+dialog_text = "У вас максимум рабов в подвале"
+
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_apperance" to="." method="_on_button_apperance_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_anatomy" to="." method="_on_button_anatomy_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_skills_common" to="." method="_on_button_skills_common_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_skills_sex" to="." method="_on_button_skills_sex_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_clothes" to="." method="_on_button_clothes_pressed"]
+[connection signal="mouse_entered" from="Status_slave/PanelContainer/VBoxContainer/Button_send_basement" to="." method="_on_button_send_basement_mouse_entered"]
+[connection signal="mouse_exited" from="Status_slave/PanelContainer/VBoxContainer/Button_send_basement" to="." method="_on_button_send_basement_mouse_exited"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_send_basement" to="." method="_on_button_send_basement_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/Slave_2" to="." method="_on_slave_2_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/Slave_3" to="." method="_on_slave_3_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/Slave_4" to="." method="_on_slave_4_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/Slave_5" to="." method="_on_slave_5_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/Slave_6" to="." method="_on_slave_6_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/HBoxContainer/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/HBoxContainer/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Show_parametr/Show_pictures" to="." method="_on_show_pictures_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]

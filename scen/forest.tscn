@@ -1,0 +1,280 @@
+[gd_scene load_steps=28 format=3 uid="uid://b0u10hdi7rahc"]
+
+[ext_resource type="Script" uid="uid://ba5aagoc0wsbn" path="res://gd/forest.gd" id="1_a2jif"]
+[ext_resource type="Texture2D" uid="uid://d2vs5djm354y3" path="res://GameData/img/Game/Places/Forest/Forest.webp" id="2_46682"]
+[ext_resource type="Texture2D" uid="uid://ccjepalmoxg6p" path="res://GameData/img/Game/Places/Forest/Патрульный.png" id="3_3ddcg"]
+[ext_resource type="FontFile" uid="uid://bki8nm2mg70q1" path="res://GameData/Fonts/Текст.ttf" id="3_46682"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="5_o40mo"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="6_mnp4p"]
+[ext_resource type="AudioStream" uid="uid://b7enqbtlbjkrn" path="res://GameData/snd/Game/Places/Forest/Надевание наручников.ogg" id="7_mnp4p"]
+
+[sub_resource type="Animation" id="Animation_mnp4p"]
+resource_name = "Magic"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera_effect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_3ddcg"]
+resource_name = "Patrol"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(176, 1711.1517), Vector2(400, 1711.1517)]
+}
+
+[sub_resource type="Animation" id="Animation_kee5t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NPC:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(176, 1711.1517)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera_effect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o40mo"]
+_data = {
+&"Magic": SubResource("Animation_mnp4p"),
+&"Patrol": SubResource("Animation_3ddcg"),
+&"RESET": SubResource("Animation_kee5t")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ddcg"]
+bg_color = Color(0, 0, 0, 0.6313726)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2jif"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_46682"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ddcg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnp4p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wxsb3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kee5t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o40mo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1khjd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kb3of"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2mun"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5lsn4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bjsf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r01ch"]
+
+[sub_resource type="Gradient" id="Gradient_mnp4p"]
+offsets = PackedFloat32Array(0, 0.99298245, 0.99649125, 1)
+colors = PackedColorArray(0, 0.8392157, 1, 0, 0, 0.8392157, 1, 0.33448425, 0, 0.8392157, 1, 0.52156866, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wxsb3"]
+gradient = SubResource("Gradient_mnp4p")
+fill = 2
+fill_from = Vector2(0.53, 0.5)
+fill_to = Vector2(1, 1.125)
+
+[node name="Forest" type="Node2D"]
+script = ExtResource("1_a2jif")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_46682")
+
+[node name="NPC" type="TextureRect" parent="."]
+offset_left = 472.0
+offset_top = -208.0
+offset_right = 648.0
+offset_bottom = 1503.1517
+texture = ExtResource("3_3ddcg")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="NPC2" type="TextureRect" parent="."]
+visible = false
+offset_left = 944.0
+offset_top = -416.0
+offset_right = 1344.0
+offset_bottom = 2326.2305
+texture = ExtResource("3_3ddcg")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_o40mo")
+}
+
+[node name="Dialog_window" type="PanelContainer" parent="."]
+offset_top = 896.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ddcg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog_window"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_46682")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Очнувшись вы оказались в лесу и перед собой вы видите двух охранников что-то обсуждающих"
+scroll_active = false
+
+[node name="Button" type="Button" parent="Dialog_window"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_focus_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_hover_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_normal_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_focus_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_hover_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_fonts/font = ExtResource("3_46682")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a2jif")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_46682")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ddcg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_mnp4p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wxsb3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kee5t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o40mo")
+alignment = 0
+
+[node name="Choose_window" type="PanelContainer" parent="."]
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 1280.0
+offset_bottom = 832.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1khjd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Choose_window"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Option_1" type="Button" parent="Choose_window/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_o40mo")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kb3of")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f2mun")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsn4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8bjsf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r01ch")
+text = "Я не знаю как тут оказался"
+
+[node name="TextureRect" type="TextureRect" parent="Choose_window/VBoxContainer/Option_1"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_mnp4p")
+expand_mode = 1
+
+[node name="Option_2" type="Button" parent="Choose_window/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_o40mo")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kb3of")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f2mun")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsn4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8bjsf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r01ch")
+text = "Я не знаю как тут оказался"
+
+[node name="TextureRect" type="TextureRect" parent="Choose_window/VBoxContainer/Option_2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_mnp4p")
+expand_mode = 1
+
+[node name="Option_3" type="Button" parent="Choose_window/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_o40mo")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kb3of")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f2mun")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5lsn4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8bjsf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r01ch")
+text = "Я не знаю как тут оказался"
+
+[node name="TextureRect" type="TextureRect" parent="Choose_window/VBoxContainer/Option_3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_mnp4p")
+expand_mode = 1
+
+[node name="Camera_effect" type="TextureRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("GradientTexture2D_wxsb3")
+
+[node name="SoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mnp4p")
+
+[connection signal="pressed" from="Dialog_window/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Choose_window/VBoxContainer/Option_1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Choose_window/VBoxContainer/Option_2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Choose_window/VBoxContainer/Option_3" to="." method="_on_button_pressed"]

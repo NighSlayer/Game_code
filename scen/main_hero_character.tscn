@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://5amxe77q5fae"]
+
+[ext_resource type="Script" uid="uid://cvqrh5nbs0ry7" path="res://gd/main_hero_character.gd" id="1_qkken"]
+[ext_resource type="Texture2D" uid="uid://d4k5eh1uopjwy" path="res://GameData/img/Game/Interface/Задник для верхнего интерфейса.jpg" id="2_1unqo"]
+[ext_resource type="Texture2D" uid="uid://dks2488qdvpbv" path="res://GameData/img/Game/Character/Characters_variants/Man/16.jpg" id="2_nkpov"]
+[ext_resource type="Texture2D" uid="uid://8ngfiw6boxc7" path="res://GameData/img/Game/Interface/Energy/4 Энергии.png" id="3_uqgn2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6lvqh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbptd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jb4iq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ertqc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jfll"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dk23"]
+
+[node name="Main_hero_character" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_qkken")
+
+[node name="Main_hero" type="Button" parent="."]
+offset_right = 96.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6lvqh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wbptd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jb4iq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ertqc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7jfll")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1dk23")
+
+[node name="TextureRect" type="TextureRect" parent="Main_hero"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+texture = ExtResource("2_nkpov")
+expand_mode = 1
+
+[node name="Info_panel" type="PanelContainer" parent="."]
+offset_left = 96.0
+offset_right = 320.0
+offset_bottom = 96.0
+
+[node name="TextureRect2" type="TextureRect" parent="Info_panel"]
+layout_mode = 2
+texture = ExtResource("2_1unqo")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Info_panel"]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Info_panel/HBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="Info_panel/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Энергия"
+
+[node name="Energy" type="TextureRect" parent="Info_panel/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+texture = ExtResource("3_uqgn2")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Info_panel/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Деньги"
+
+[node name="Money" type="Label" parent="Info_panel/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "0
+"
+horizontal_alignment = 1
+
+[node name="Info_time_and_place" type="PanelContainer" parent="."]
+offset_left = 864.0
+offset_right = 1056.0
+offset_bottom = 96.0
+
+[node name="TextureRect" type="TextureRect" parent="Info_time_and_place"]
+layout_mode = 2
+texture = ExtResource("2_1unqo")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Info_time_and_place"]
+layout_mode = 2
+alignment = 1
+
+[node name="Time" type="Label" parent="Info_time_and_place/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="Place" type="Label" parent="Info_time_and_place/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Main_hero" to="." method="_on_main_hero_pressed"]

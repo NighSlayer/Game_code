@@ -1,0 +1,1477 @@
+[gd_scene load_steps=55 format=3 uid="uid://cmr3qwkd77sbo"]
+
+[ext_resource type="Script" uid="uid://byf2isaahyk5j" path="res://gd/choose_difficult.gd" id="1_6t5vh"]
+[ext_resource type="Texture2D" uid="uid://dvqeseek6ll8l" path="res://GameData/img/Main menu/Экран настройки персонажа.png" id="2_xas4i"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="3_cxf6d"]
+[ext_resource type="FontFile" uid="uid://dw2wyvyf0ix74" path="res://GameData/Fonts/Текст параметров.ttf" id="4_4nku0"]
+[ext_resource type="Texture2D" uid="uid://dh13nkofyoyto" path="res://GameData/img/Game/Character/Characters_variants/Man/1.jpg" id="4_l7d1f"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="5_jd2cf"]
+[ext_resource type="Texture2D" uid="uid://ewacwgowcp3a" path="res://GameData/img/Game/Interface/Стрелочка влево norm.png" id="5_optby"]
+[ext_resource type="Texture2D" uid="uid://dae8dt1uhm7vm" path="res://GameData/img/Game/Interface/Стрелочка вправо norm.png" id="6_idg1m"]
+[ext_resource type="Texture2D" uid="uid://xumc1r7lkh8i" path="res://GameData/img/Game/Character/Метка главного героя.png" id="7_dsksa"]
+[ext_resource type="Texture2D" uid="uid://bssjf6je4f65w" path="res://GameData/img/Game/Character/Hand_emblems/2.png" id="8_fsqwy"]
+[ext_resource type="AudioStream" uid="uid://ld6yl1mk5ujt" path="res://GameData/snd/Game/Places/Choose difficult/Горит свеча.mp3" id="9_xreja"]
+[ext_resource type="AudioStream" uid="uid://812tk2in1tln" path="res://GameData/snd/Game/Places/Choose difficult/Задувание свечи.mp3" id="10_2yrpa"]
+[ext_resource type="FontFile" uid="uid://caw21ya1hsavt" path="res://GameData/Fonts/Аукционист.ttf" id="10_a5mtj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4n6n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2w503"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmpib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6kqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j4cyj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_380ep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flc0r"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_51o8a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wry87"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx54o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vixrr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfabe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t7k80"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ocr2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mqwbb"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_6gwog"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eoh3o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdn72"]
+texture = ExtResource("5_optby")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dq4q"]
+texture = ExtResource("5_optby")
+modulate_color = Color(0.864675, 0.864675, 0.864675, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8dsy"]
+texture = ExtResource("5_optby")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owuw6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eywpb"]
+texture = ExtResource("6_idg1m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vffg0"]
+texture = ExtResource("6_idg1m")
+modulate_color = Color(0.864675, 0.864675, 0.864675, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l481v"]
+texture = ExtResource("6_idg1m")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2cfob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vyw4v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_316ly"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnqcc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trj1e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v78lf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_53y7o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vw2c0"]
+bg_color = Color(5.77569e-07, 0.709349, 0.281157, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a3pll"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_js0bg"]
+bg_color = Color(0, 0.709804, 0.282353, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vqlh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic71y"]
+bg_color = Color(0, 0.709804, 0.282353, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i0ql3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25mrc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prxb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_exloc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4jsh0"]
+
+[node name="choose_difficult" type="Node2D"]
+script = ExtResource("1_6t5vh")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_xas4i")
+
+[node name="Difficult" type="PanelContainer" parent="."]
+offset_left = 856.0
+offset_top = 64.0
+offset_right = 1384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u4n6n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Difficult"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Difficult/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Сложность"
+horizontal_alignment = 1
+
+[node name="Hard" type="CheckBox" parent="Difficult/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2w503")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lmpib")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m6kqe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_j4cyj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_380ep")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_flc0r")
+button_group = SubResource("ButtonGroup_51o8a")
+text = "Сложно"
+alignment = 1
+
+[node name="Normal" type="CheckBox" parent="Difficult/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2w503")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lmpib")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m6kqe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_j4cyj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_380ep")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_flc0r")
+button_pressed = true
+button_group = SubResource("ButtonGroup_51o8a")
+text = "Нормально"
+alignment = 1
+
+[node name="Easy" type="CheckBox" parent="Difficult/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2w503")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lmpib")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m6kqe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_j4cyj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_380ep")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_flc0r")
+button_group = SubResource("ButtonGroup_51o8a")
+text = "Легко"
+alignment = 1
+
+[node name="Gender" type="PanelContainer" parent="."]
+offset_left = 1344.0
+offset_top = 36.0
+offset_right = 1860.0
+offset_bottom = 132.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wry87")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Gender"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Gender/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Пол"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Gender/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Man" type="CheckBox" parent="Gender/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tx54o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vixrr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wfabe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_t7k80")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ocr2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mqwbb")
+button_pressed = true
+button_group = SubResource("ButtonGroup_6gwog")
+text = "Мужской"
+
+[node name="Woman" type="CheckBox" parent="Gender/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.545098, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tx54o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vixrr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wfabe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_t7k80")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ocr2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mqwbb")
+button_group = SubResource("ButtonGroup_6gwog")
+text = "Женский"
+
+[node name="Character_design" type="PanelContainer" parent="."]
+offset_left = 1344.0
+offset_top = 132.0
+offset_right = 1860.0
+offset_bottom = 409.5
+theme_override_styles/panel = SubResource("StyleBoxEmpty_eoh3o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Character_design"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Character_picture" type="TextureRect" parent="Character_design/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_l7d1f")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Character_design/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 37
+alignment = 1
+
+[node name="Left" type="Button" parent="Character_design/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdn72")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8dq4q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_y8dsy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_owuw6")
+expand_icon = true
+
+[node name="Right" type="Button" parent="Character_design/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_eywpb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vffg0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l481v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2cfob")
+expand_icon = true
+
+[node name="Hand_design" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 60.0
+offset_bottom = 60.0
+
+[node name="Hand" type="PanelContainer" parent="Hand_design"]
+layout_mode = 0
+offset_left = 1344.0
+offset_top = 420.0
+offset_right = 1860.0
+offset_bottom = 997.5
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vyw4v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hand_design/Hand"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TextureRect" type="TextureRect" parent="Hand_design/Hand/VBoxContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_dsksa")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Hand_design/Hand/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 37
+alignment = 1
+
+[node name="Previous" type="Button" parent="Hand_design/Hand/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdn72")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8dq4q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_y8dsy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_owuw6")
+expand_icon = true
+
+[node name="Next" type="Button" parent="Hand_design/Hand/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_eywpb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vffg0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l481v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2cfob")
+expand_icon = true
+
+[node name="Emblem" type="PanelContainer" parent="Hand_design"]
+layout_mode = 0
+offset_left = 1520.0
+offset_top = 672.0
+offset_right = 1745.0
+offset_bottom = 936.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_316ly")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hand_design/Emblem"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Hand_design/Emblem/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_fsqwy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Hand_design/Emblem/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_a5mtj")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Points" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 90)
+offset_left = 856.0
+offset_top = 32.0
+offset_right = 1348.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Количество нераспределённых очков:"
+autowrap_mode = 2
+
+[node name="Parametrs" type="PanelContainer" parent="."]
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 336.0
+offset_bottom = 536.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hnqcc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Parametrs"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Main_parametrs" type="VBoxContainer" parent="Parametrs/HBoxContainer"]
+custom_minimum_size = Vector2(432, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Name" type="LineEdit" parent="Parametrs/HBoxContainer/Main_parametrs"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.458405, 0.458405, 0.458405, 1)
+theme_override_fonts/font = ExtResource("10_a5mtj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_trj1e")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_v78lf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_53y7o")
+placeholder_text = "Введите имя"
+max_length = 11
+
+[node name="Skills" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Основные параметры:"
+
+[node name="Skills2" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Выносливость"
+horizontal_alignment = 1
+
+[node name="Endurance" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_endurance" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Endurance"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_endurance" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Endurance"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Endurance"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills3" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Харизма"
+horizontal_alignment = 1
+
+[node name="Charisma" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_charisma" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Charisma"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_charisma" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Charisma"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Charisma"]
+custom_minimum_size = Vector2(165, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills4" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Красота"
+horizontal_alignment = 1
+
+[node name="Beauty" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_beauty" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Beauty"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_beauty" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Beauty"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Beauty"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills5" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Либидо"
+horizontal_alignment = 1
+
+[node name="Libido" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_libido" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Libido"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_libido" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Libido"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Libido"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Common_skills" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Навыки:"
+
+[node name="Skills6" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Наставничество"
+horizontal_alignment = 1
+
+[node name="Mentor" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_mentor" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Mentor"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_mentor" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Mentor"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Mentor"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills7" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Дворецкий"
+horizontal_alignment = 1
+
+[node name="Steward" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_steward" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Steward"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_steward" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Steward"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Steward"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills8" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Арт-директор"
+horizontal_alignment = 1
+
+[node name="Art_director" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_art_director" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Art_director"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_art_director" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Art_director"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Art_director"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills9" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Медик"
+horizontal_alignment = 1
+
+[node name="Medic" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_medic" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Medic"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_medic" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Medic"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Medic"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills10" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+horizontal_alignment = 1
+
+[node name="Combat_training" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_combat_training" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Combat_training"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_combat_training" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Combat_training"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Combat_training"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills11" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Маг"
+horizontal_alignment = 1
+
+[node name="Magician" type="HBoxContainer" parent="Parametrs/HBoxContainer/Main_parametrs"]
+layout_mode = 2
+
+[node name="Increase_magician" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Magician"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_magician" type="Button" parent="Parametrs/HBoxContainer/Main_parametrs/Magician"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Main_parametrs/Magician"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills_parametrs" type="VBoxContainer" parent="Parametrs/HBoxContainer"]
+custom_minimum_size = Vector2(432, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+
+[node name="Sex_skills" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Секс навыки:"
+
+[node name="Skills12" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Доминирование"
+horizontal_alignment = 1
+
+[node name="Dominance" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_dominance" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Dominance"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_dominance" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Dominance"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs/Dominance"]
+custom_minimum_size = Vector2(178, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills13" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Петтинг"
+horizontal_alignment = 1
+
+[node name="Petting" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_petting" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Petting"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_petting" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Petting"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="TextureRect" type="TextureRect" parent="Parametrs/HBoxContainer/Skills_parametrs/Petting"]
+custom_minimum_size = Vector2(225, 37.5)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Skills14" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Оральный секс"
+horizontal_alignment = 1
+
+[node name="Oral_sex" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_oral_sex" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Oral_sex"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_oral_sex" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Oral_sex"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="TextureRect" type="TextureRect" parent="Parametrs/HBoxContainer/Skills_parametrs/Oral_sex"]
+custom_minimum_size = Vector2(225, 37.5)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Skills15" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Пенетрация"
+horizontal_alignment = 1
+
+[node name="Penetration" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_penetration" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Penetration"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_penetration" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Penetration"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="TextureRect" type="TextureRect" parent="Parametrs/HBoxContainer/Skills_parametrs/Penetration"]
+custom_minimum_size = Vector2(225, 37.5)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Skills16" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Фетишизм"
+horizontal_alignment = 1
+
+[node name="Fetishism" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_fetishism" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Fetishism"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_fetishism" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Fetishism"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="TextureRect" type="TextureRect" parent="Parametrs/HBoxContainer/Skills_parametrs/Fetishism"]
+custom_minimum_size = Vector2(225, 37.5)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Skills17" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Пытки"
+horizontal_alignment = 1
+
+[node name="Tortue" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_tortue" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Tortue"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_tortue" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Tortue"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs/Tortue"]
+custom_minimum_size = Vector2(178, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills18" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Порка"
+horizontal_alignment = 1
+
+[node name="Spanking" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_spanking" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Spanking"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_spanking" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Spanking"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs/Spanking"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Skills19" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+text = "Связывание"
+horizontal_alignment = 1
+
+[node name="Binding" type="HBoxContainer" parent="Parametrs/HBoxContainer/Skills_parametrs"]
+layout_mode = 2
+
+[node name="Increase_binding" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Binding"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "+"
+
+[node name="Decrease_binding" type="Button" parent="Parametrs/HBoxContainer/Skills_parametrs/Binding"]
+custom_minimum_size = Vector2(52.5, 52.5)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vw2c0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a3pll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_js0bg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4vqlh")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic71y")
+text = "-
+"
+
+[node name="Label" type="Label" parent="Parametrs/HBoxContainer/Skills_parametrs/Binding"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4nku0")
+theme_override_font_sizes/font_size = 30
+text = "Боевая подготовка"
+
+[node name="Interface_buttons" type="PanelContainer" parent="."]
+offset_left = 8.0
+offset_top = 984.0
+offset_right = 1160.0
+offset_bottom = 1074.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_i0ql3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Interface_buttons"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Back" type="Button" parent="Interface_buttons/HBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_25mrc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_prxb5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_exloc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4jsh0")
+text = "Назад"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Interface_buttons/HBoxContainer/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_jd2cf")
+expand_mode = 1
+
+[node name="Start" type="Button" parent="Interface_buttons/HBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_cxf6d")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_25mrc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_prxb5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_exloc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4jsh0")
+text = "Начать"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Interface_buttons/HBoxContainer/Start"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_jd2cf")
+expand_mode = 1
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_xreja")
+volume_db = -15.0
+bus = &"Music"
+parameters/looping = true
+
+[node name="Sound_buttons" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_2yrpa")
+bus = &"Sfx"
+
+[connection signal="toggled" from="Difficult/VBoxContainer/Hard" to="." method="_on_hard_toggled"]
+[connection signal="toggled" from="Difficult/VBoxContainer/Normal" to="." method="_on_normal_toggled"]
+[connection signal="toggled" from="Difficult/VBoxContainer/Easy" to="." method="_on_easy_toggled"]
+[connection signal="toggled" from="Gender/VBoxContainer/HBoxContainer/Man" to="." method="_on_man_toggled"]
+[connection signal="toggled" from="Gender/VBoxContainer/HBoxContainer/Woman" to="." method="_on_woman_toggled"]
+[connection signal="pressed" from="Character_design/VBoxContainer/HBoxContainer/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Character_design/VBoxContainer/HBoxContainer/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Hand_design/Hand/VBoxContainer/HBoxContainer/Previous" to="." method="_on_previous_pressed"]
+[connection signal="pressed" from="Hand_design/Hand/VBoxContainer/HBoxContainer/Next" to="." method="_on_next_pressed"]
+[connection signal="text_changed" from="Parametrs/HBoxContainer/Main_parametrs/Name" to="." method="_on_name_text_changed"]
+[connection signal="text_submitted" from="Parametrs/HBoxContainer/Main_parametrs/Name" to="." method="_on_name_text_submitted"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Endurance/Increase_endurance" to="." method="_on_increase_endurance_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Endurance/Decrease_endurance" to="." method="_on_decrease_endurance_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Charisma/Increase_charisma" to="." method="_on_increase_charisma_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Charisma/Decrease_charisma" to="." method="_on_decrease_charisma_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Beauty/Increase_beauty" to="." method="_on_increase_beauty_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Beauty/Decrease_beauty" to="." method="_on_decrease_beauty_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Libido/Increase_libido" to="." method="_on_increase_libido_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Libido/Decrease_libido" to="." method="_on_decrease_libido_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Mentor/Increase_mentor" to="." method="_on_increase_mentor_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Mentor/Decrease_mentor" to="." method="_on_decrease_mentor_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Steward/Increase_steward" to="." method="_on_increase_steward_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Steward/Decrease_steward" to="." method="_on_decrease_steward_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Art_director/Increase_art_director" to="." method="_on_increase_art_director_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Art_director/Decrease_art_director" to="." method="_on_decrease_art_director_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Medic/Increase_medic" to="." method="_on_increase_medic_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Medic/Decrease_medic" to="." method="_on_decrease_medic_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Combat_training/Increase_combat_training" to="." method="_on_increase_combat_training_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Combat_training/Decrease_combat_training" to="." method="_on_decrease_combat_training_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Magician/Increase_magician" to="." method="_on_increase_magician_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Main_parametrs/Magician/Decrease_magician" to="." method="_on_decrease_magician_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Dominance/Increase_dominance" to="." method="_on_increase_dominance_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Dominance/Decrease_dominance" to="." method="_on_decrease_dominance_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Petting/Increase_petting" to="." method="_on_increase_petting_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Petting/Decrease_petting" to="." method="_on_decrease_petting_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Oral_sex/Increase_oral_sex" to="." method="_on_increase_oral_sex_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Oral_sex/Decrease_oral_sex" to="." method="_on_decrease_oral_sex_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Penetration/Increase_penetration" to="." method="_on_increase_penetration_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Penetration/Decrease_penetration" to="." method="_on_decrease_penetration_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Fetishism/Increase_fetishism" to="." method="_on_increase_fetishism_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Fetishism/Decrease_fetishism" to="." method="_on_decrease_fetishism_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Tortue/Increase_tortue" to="." method="_on_increase_tortue_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Tortue/Decrease_tortue" to="." method="_on_decrease_tortue_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Spanking/Increase_spanking" to="." method="_on_increase_spanking_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Spanking/Decrease_spanking" to="." method="_on_decrease_spanking_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Binding/Increase_binding" to="." method="_on_increase_binding_pressed"]
+[connection signal="pressed" from="Parametrs/HBoxContainer/Skills_parametrs/Binding/Decrease_binding" to="." method="_on_decrease_binding_pressed"]
+[connection signal="pressed" from="Interface_buttons/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Interface_buttons/HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="finished" from="Sound_buttons" to="." method="_on_sound_buttons_finished"]

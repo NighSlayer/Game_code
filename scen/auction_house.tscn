@@ -1,0 +1,397 @@
+[gd_scene load_steps=13 format=3 uid="uid://cyb4op26vcpbe"]
+
+[ext_resource type="Script" uid="uid://b2ywwnwrbu18s" path="res://gd/auction_house.gd" id="1_74fut"]
+[ext_resource type="Texture2D" uid="uid://c2flynw3803td" path="res://GameData/img/Game/Places/Rich_district/Аукционный дом/Стойка регистрации на аукцион.png" id="1_l4yj0"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_ufl48"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="3_iysvx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_det7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dla4l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4tkab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0pjm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1uu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ul324"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ddptu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_repe3"]
+
+[node name="Auction_house" type="Node2D"]
+script = ExtResource("1_74fut")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_l4yj0")
+expand_mode = 1
+
+[node name="Actions" type="PanelContainer" parent="."]
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_det7c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Actions"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Buy_ticket" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Купить билет на аукцион"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Buy_ticket"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Offer_slave" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Выставить рабыню на аукцион"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Offer_slave"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Выйти"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Exit"]
+show_behind_parent = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Auction_quality" type="PanelContainer" parent="."]
+offset_left = 88.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_repe3")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Auction_quality"]
+custom_minimum_size = Vector2(392, 0)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Auction_quality/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+
+[node name="Ultra_luxury" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Ультралюксовый"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Ultra_luxury"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Super_elite" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Супер-элитный"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Super_elite"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="VIP" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "ВИП"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/VIP"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Elite" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Элитный"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Elite"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Premium" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Премиум"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Premium"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Advanced" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Продвинутый"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Advanced"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Amauter" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Любительский"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Amauter"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Starter" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Начальный"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Starter"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Wii" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Потеряшек"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Wii"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="Auction_quality/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_iysvx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+text = "Назад"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Auction_quality/ScrollContainer/VBoxContainer/Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufl48")
+expand_mode = 1
+
+[connection signal="pressed" from="Actions/VBoxContainer/Buy_ticket" to="." method="_on_buy_ticket_pressed"]
+[connection signal="pressed" from="Actions/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Ultra_luxury" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Super_elite" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/VIP" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Elite" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Premium" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Advanced" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Amauter" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Starter" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Wii" to="." method="_auction_start"]
+[connection signal="pressed" from="Auction_quality/ScrollContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

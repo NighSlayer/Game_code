@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkhaityw66n1f"]
+
+[ext_resource type="Script" uid="uid://bmc0p4yprksdv" path="res://gd/filword_game.gd" id="1_jlpid"]
+
+[node name="Filword_game" type="Node2D"]
+script = ExtResource("1_jlpid")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 1472.0
+offset_bottom = 832.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+offset_left = 448.0
+offset_top = 832.0
+offset_right = 1472.0
+offset_bottom = 1080.0

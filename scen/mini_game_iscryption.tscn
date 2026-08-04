@@ -1,0 +1,199 @@
+[gd_scene load_steps=4 format=3 uid="uid://xv58w6h5xnxl"]
+
+[ext_resource type="Texture2D" uid="uid://oxd8y4li20lm" path="res://GameData/img/Game/Mini game/Стол для мини-игры.jpg" id="1_xcdxd"]
+[ext_resource type="Texture2D" uid="uid://bhcceta2vl23r" path="res://GameData/img/Game/Mini game/Фон карт мини-игры.jpg" id="2_2f2db"]
+[ext_resource type="Texture2D" uid="uid://dme0n4p1dge1u" path="res://GameData/img/Game/Mini game/Рубашка карты.jpg" id="3_xjlof"]
+
+[node name="Mini_game_iscryption" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_xcdxd")
+expand_mode = 1
+
+[node name="Table" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Card11" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 192.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card12" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 192.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card13" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 64.0
+offset_right = 768.0
+offset_bottom = 192.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card14" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 64.0
+offset_right = 960.0
+offset_bottom = 192.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card21" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 216.0
+offset_right = 384.0
+offset_bottom = 344.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card22" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 216.0
+offset_right = 576.0
+offset_bottom = 344.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="CArd23" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 216.0
+offset_right = 768.0
+offset_bottom = 344.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card24" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 216.0
+offset_right = 960.0
+offset_bottom = 344.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card31" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 368.0
+offset_right = 384.0
+offset_bottom = 496.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card32" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 368.0
+offset_right = 576.0
+offset_bottom = 496.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card33" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 368.0
+offset_right = 768.0
+offset_bottom = 496.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Card34" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 368.0
+offset_right = 960.0
+offset_bottom = 496.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="Deck" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 216.0
+offset_right = 1136.0
+offset_bottom = 344.0
+texture = ExtResource("3_xjlof")
+expand_mode = 1
+
+[node name="Deck_squirrels" type="TextureRect" parent="Table"]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 360.0
+offset_right = 1136.0
+offset_bottom = 488.0
+texture = ExtResource("3_xjlof")
+expand_mode = 1
+
+[node name="Hand" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Hand"]
+offset_left = 192.0
+offset_top = 592.0
+offset_right = 320.0
+offset_bottom = 720.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Hand"]
+offset_left = 328.0
+offset_top = 592.0
+offset_right = 456.0
+offset_bottom = 720.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Hand"]
+offset_left = 464.0
+offset_top = 592.0
+offset_right = 592.0
+offset_bottom = 720.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Hand"]
+offset_left = 600.0
+offset_top = 592.0
+offset_right = 728.0
+offset_bottom = 720.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Hand"]
+offset_left = 736.0
+offset_top = 592.0
+offset_right = 864.0
+offset_bottom = 720.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Hand"]
+offset_left = 872.0
+offset_top = 592.0
+offset_right = 1000.0
+offset_bottom = 720.0
+texture = ExtResource("2_2f2db")
+expand_mode = 1

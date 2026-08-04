@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://hn4rq8f5tg27"]
+
+[ext_resource type="Texture2D" uid="uid://ckh75b02ck22h" path="res://GameData/img/Game/Places/Rich_district/Магазин украшений/Магазин ювелирных изделий.png" id="1_ewq3n"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_l664a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_det7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ddptu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ul324"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1uu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0pjm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4tkab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dla4l"]
+
+[node name="Jewerly_shop" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_ewq3n")
+
+[node name="Actions" type="PanelContainer" parent="."]
+offset_left = 120.0
+offset_top = 128.0
+offset_right = 376.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_det7c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Actions"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Buy_jewerly" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+text = "Купить украшение"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Buy_jewerly"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l664a")
+expand_mode = 1
+
+[node name="Owner_preferences" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+text = "Узнать предпочтения у владельца"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Owner_preferences"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l664a")
+expand_mode = 1
+
+[node name="Offer_slave" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+text = "Предложить рабыню
+"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Offer_slave"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l664a")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ddptu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ul324")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v1uu6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x0pjm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4tkab")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dla4l")
+text = "Выйти"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l664a")
+expand_mode = 1

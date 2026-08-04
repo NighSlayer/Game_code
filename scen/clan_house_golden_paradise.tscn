@@ -1,0 +1,176 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwvqx3taqa1bb"]
+
+[ext_resource type="Texture2D" uid="uid://wfu27wk8ynlf" path="res://GameData/img/Game/Places/Elite_district/Клановый дом Золотой рай/Золотой рай.jpg" id="1_7kgmh"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="2_wxien"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hydok"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7oq85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8frw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvxwq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g1hlq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tne3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_on0bk"]
+
+[node name="Clan_house_golden_paradise" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_7kgmh")
+
+[node name="Actions" type="PanelContainer" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hydok")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Actions"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Auction" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7oq85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8frw5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pvxwq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g1hlq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tne3g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_on0bk")
+text = "Аукцион"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Auction"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wxien")
+expand_mode = 1
+
+[node name="Order" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7oq85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8frw5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pvxwq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g1hlq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tne3g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_on0bk")
+text = "Заказы"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Order"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wxien")
+expand_mode = 1
+
+[node name="Tranings" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7oq85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8frw5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pvxwq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g1hlq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tne3g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_on0bk")
+text = "Зайти в тату салон"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Tranings"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wxien")
+expand_mode = 1
+
+[node name="Archive" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7oq85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8frw5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pvxwq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g1hlq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tne3g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_on0bk")
+text = "Зайти в архив"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Archive"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wxien")
+expand_mode = 1
+
+[node name="Post" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7oq85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8frw5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pvxwq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g1hlq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tne3g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_on0bk")
+text = "Занять свободную должность"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Post"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wxien")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Actions/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7oq85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8frw5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pvxwq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g1hlq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tne3g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_on0bk")
+text = "Выйти"
+
+[node name="TextureRect" type="TextureRect" parent="Actions/VBoxContainer/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wxien")
+expand_mode = 1

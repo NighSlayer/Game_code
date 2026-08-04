@@ -1,0 +1,436 @@
+[gd_scene load_steps=13 format=3 uid="uid://drwg4uokwm5uv"]
+
+[ext_resource type="Script" path="res://gd/tailor.gd" id="1_bcjfs"]
+[ext_resource type="Texture2D" uid="uid://yhmmmjc8sjlw" path="res://GameData/img/Game/Places/Trading area/Tailor.jpg" id="1_kr2pa"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="2_mkyme"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="4_hyh4j"]
+[ext_resource type="Texture2D" uid="uid://bml0i3kmmieu7" path="res://GameData/img/Main menu/Настройки.png" id="5_x0vtc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gd4b5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_redw6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fq4i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kgxea"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0m5bv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_smn0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvc0i"]
+
+[node name="Tailor" type="Node2D"]
+script = ExtResource("1_bcjfs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_kr2pa")
+expand_mode = 1
+
+[node name="Dialog" type="RichTextLabel" parent="."]
+offset_left = 440.0
+offset_top = 576.0
+offset_right = 896.0
+offset_bottom = 704.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialog"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mkyme")
+expand_mode = 1
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 1160.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 112.0
+
+[node name="TextureRect" type="TextureRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_x0vtc")
+expand_mode = 1
+
+[node name="Main_menu_tailor" type="PanelContainer" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gd4b5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main_menu_tailor"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Buy_clothes" type="Button" parent="Main_menu_tailor/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Купить одежду"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_tailor/VBoxContainer/Buy_clothes"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Order_clothes" type="Button" parent="Main_menu_tailor/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Заказать одежду"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_tailor/VBoxContainer/Order_clothes"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Main_menu_tailor/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Выйти на рынок"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_tailor/VBoxContainer/Exit"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Products" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Products1" type="PanelContainer" parent="Products"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_smn0o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Products/Products1"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="First_product" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Одежда горничной"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/First_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Second_product" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Одежда ночной бабочки"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/Second_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Third_product" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Одежда кухарки"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/Third_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Fourth_product" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Одежда мага"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/Fourth_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Fifth_product" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Одежда медсестры"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/Fifth_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Sixth_product" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Боевые доспехи"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/Sixth_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Seventh_product" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Школьная форма"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/Seventh_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="Products/Products1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Назад"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products1/VBoxContainer/Back"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[node name="Products2" type="PanelContainer" parent="Products"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 704.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pvc0i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Products/Products2"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Eighth_product" type="Button" parent="Products/Products2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_redw6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7fq4i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kgxea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0m5bv")
+text = "Алхимика"
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Products/Products2/VBoxContainer/Eighth_product"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 0.496002
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hyh4j")
+expand_mode = 1
+
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Main_menu_tailor/VBoxContainer/Buy_clothes" to="." method="_on_buy_clothes_pressed"]
+[connection signal="pressed" from="Main_menu_tailor/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="Products/Products1/VBoxContainer/First_product" to="." method="_on_first_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products1/VBoxContainer/First_product" to="." method="_on_first_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/First_product" to="." method="_on_first_product_pressed"]
+[connection signal="mouse_entered" from="Products/Products1/VBoxContainer/Second_product" to="." method="_on_second_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products1/VBoxContainer/Second_product" to="." method="_on_second_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/Second_product" to="." method="_on_second_product_pressed"]
+[connection signal="mouse_entered" from="Products/Products1/VBoxContainer/Third_product" to="." method="_on_third_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products1/VBoxContainer/Third_product" to="." method="_on_third_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/Third_product" to="." method="_on_third_product_pressed"]
+[connection signal="mouse_entered" from="Products/Products1/VBoxContainer/Fourth_product" to="." method="_on_fourth_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products1/VBoxContainer/Fourth_product" to="." method="_on_fourth_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/Fourth_product" to="." method="_on_fourth_product_pressed"]
+[connection signal="mouse_entered" from="Products/Products1/VBoxContainer/Fifth_product" to="." method="_on_fifth_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products1/VBoxContainer/Fifth_product" to="." method="_on_fifth_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/Fifth_product" to="." method="_on_fifth_product_pressed"]
+[connection signal="mouse_entered" from="Products/Products1/VBoxContainer/Sixth_product" to="." method="_on_sixth_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products1/VBoxContainer/Sixth_product" to="." method="_on_sixth_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/Sixth_product" to="." method="_on_sixth_product_pressed"]
+[connection signal="mouse_entered" from="Products/Products1/VBoxContainer/Seventh_product" to="." method="_on_seventh_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products1/VBoxContainer/Seventh_product" to="." method="_on_seventh_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/Seventh_product" to="." method="_on_seventh_product_pressed"]
+[connection signal="pressed" from="Products/Products1/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="Products/Products2/VBoxContainer/Eighth_product" to="." method="_on_eighth_product_mouse_entered"]
+[connection signal="mouse_exited" from="Products/Products2/VBoxContainer/Eighth_product" to="." method="_on_eighth_product_mouse_exited"]
+[connection signal="pressed" from="Products/Products2/VBoxContainer/Eighth_product" to="." method="_on_eighth_product_pressed"]

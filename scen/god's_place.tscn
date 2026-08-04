@@ -1,0 +1,98 @@
+[gd_scene load_steps=12 format=3 uid="uid://de5077ovd2e7"]
+
+[ext_resource type="Script" uid="uid://b3cyrn16fekgg" path="res://gd/god's_place.gd" id="1_36qi2"]
+[ext_resource type="Texture2D" uid="uid://2q7raj0nipmd" path="res://GameData/img/Game/Places/God/Место бога.png" id="1_fg60t"]
+[ext_resource type="AudioStream" uid="uid://bjk1uuhvmydj6" path="res://GameData/snd/Game/Places/God/Ветер.mp3" id="2_exyh8"]
+[ext_resource type="FontFile" uid="uid://caw21ya1hsavt" path="res://GameData/Fonts/Аукционист.ttf" id="3_36t2v"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="3_s7chx"]
+[ext_resource type="FontFile" uid="uid://bki8nm2mg70q1" path="res://GameData/Fonts/Текст.ttf" id="5_4jgvj"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="7_k6q3o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qded0"]
+bg_color = Color(0.41661, 0.633469, 0.744553, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kxkf"]
+bg_color = Color(0.415686, 0.635294, 0.745098, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsjor"]
+bg_color = Color(0.534982, 0.737091, 0.840388, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thjv3"]
+
+[node name="God\'s_place" type="Node2D"]
+script = ExtResource("1_36qi2")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1536.0
+offset_bottom = 1080.0
+texture = ExtResource("1_fg60t")
+expand_mode = 1
+
+[node name="Paper_text" type="Label" parent="."]
+visible = false
+offset_left = 540.0
+offset_top = 372.0
+offset_right = 1020.0
+offset_bottom = 864.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_36t2v")
+theme_override_font_sizes/font_size = 30
+text = "Он стал рабом своего замысла, и мир, созданный им, отверг своего бога, заковав его в цепи.
+
+Ведь каждый выбор и действие несут за собой последствия."
+autowrap_mode = 2
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_exyh8")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="History_text" type="RichTextLabel" parent="."]
+offset_left = 1536.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_fonts/normal_font = ExtResource("5_4jgvj")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+bbcode_enabled = true
+text = "Вы открываете глаза. Вокруг простирается бескрайнее небо, объятое мягкими облаками. Перед вами возвышается простой стол, на котором покоится лист бумаги, словно ждущий вашего прочтения."
+
+[node name="TextureRect" type="TextureRect" parent="History_text"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_s7chx")
+expand_mode = 1
+
+[node name="Next" type="Button" parent="."]
+offset_left = 1536.0
+offset_top = 960.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_fonts/font = ExtResource("7_k6q3o")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qded0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1kxkf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jsjor")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_thjv3")
+text = "Дальше"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

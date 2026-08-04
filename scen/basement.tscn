@@ -1,0 +1,2698 @@
+[gd_scene load_steps=49 format=3 uid="uid://b82p77kbxttuo"]
+
+[ext_resource type="Script" uid="uid://de103fjp04w2s" path="res://gd/basement.gd" id="1_lj4w0"]
+[ext_resource type="Texture2D" uid="uid://d1ev1r4wg2ut5" path="res://GameData/img/Game/Places/Home/Подвал.png" id="2_mqws8"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="3_00cxe"]
+[ext_resource type="Texture2D" uid="uid://b2c7e0dd4cfwt" path="res://GameData/img/Game/Interface/Фон бокового интерфейса.jpg" id="4_dmf61"]
+[ext_resource type="Texture2D" uid="uid://dfaprsns8a2bv" path="res://GameData/img/Game/Interface/close_button.png" id="5_wxddg"]
+[ext_resource type="Texture2D" uid="uid://dxq36p4ve44cn" path="res://GameData/img/Game/Interface/demo_back_button.png" id="6_5c082"]
+[ext_resource type="Texture2D" uid="uid://bml0i3kmmieu7" path="res://GameData/img/Main menu/Настройки.png" id="7_i8yph"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aityj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4b5jr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lainj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0288e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l7th"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1eaa4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mlace"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4sc2d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asbbv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l04ef"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yn26m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0kanp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kifck"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_clsy2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_stx5r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b82g1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1yjpe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_84mlg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eq47m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4tn1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nrrij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymdsa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rw3si"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4krkm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtk8v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ncmxn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fa4u7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2jg2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pv02h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ldk1d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqopv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_osavc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ynuu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27rux"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgovb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kp3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ls2s8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74yia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dsvq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12fgq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_82gxy"]
+
+[node name="Basement" type="Node2D"]
+script = ExtResource("1_lj4w0")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_mqws8")
+expand_mode = 1
+
+[node name="Slave" type="TextureRect" parent="."]
+offset_left = 208.0
+offset_top = 120.0
+offset_right = 1003.0
+offset_bottom = 720.0
+
+[node name="Main_menu_basement" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Main_menu_basement"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_aityj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main_menu_basement/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Slave_free" type="Button" parent="Main_menu_basement/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Освободить раба"
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_basement/PanelContainer/VBoxContainer/Slave_free"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Back_home" type="Button" parent="Main_menu_basement/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Вернуться"
+
+[node name="TextureRect" type="TextureRect" parent="Main_menu_basement/PanelContainer/VBoxContainer/Back_home"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Get_out_slave" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 168.0
+offset_bottom = 168.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Get_out_slave"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 448.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4sc2d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Get_out_slave/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Slave_1" type="Button" parent="Get_out_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Get_out_slave/PanelContainer/VBoxContainer/Slave_1"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Slave_2" type="Button" parent="Get_out_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Get_out_slave/PanelContainer/VBoxContainer/Slave_2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Slave_3" type="Button" parent="Get_out_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Get_out_slave/PanelContainer/VBoxContainer/Slave_3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Slave_4" type="Button" parent="Get_out_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Get_out_slave/PanelContainer/VBoxContainer/Slave_4"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Slave_5" type="Button" parent="Get_out_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Раб 1"
+
+[node name="TextureRect" type="TextureRect" parent="Get_out_slave/PanelContainer/VBoxContainer/Slave_5"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Back_get_out_slave" type="Button" parent="Get_out_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4b5jr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lainj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0288e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3l7th")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1eaa4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mlace")
+text = "Назад"
+
+[node name="TextureRect" type="TextureRect" parent="Get_out_slave/PanelContainer/VBoxContainer/Back_get_out_slave"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_00cxe")
+expand_mode = 1
+
+[node name="Status_slave" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 928.0
+offset_top = 88.0
+offset_right = 968.0
+offset_bottom = 128.0
+
+[node name="TextureRect" type="TextureRect" parent="Status_slave"]
+layout_mode = 0
+offset_right = 352.0
+offset_bottom = 520.0
+texture = ExtResource("4_dmf61")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Status_slave"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 88.0
+offset_right = 328.0
+offset_bottom = 464.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_asbbv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_slave/PanelContainer"]
+layout_mode = 2
+
+[node name="Button_apperance" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+text = "Внешний вид"
+
+[node name="Button_anatomy" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+text = "Анатомия"
+
+[node name="Button_skills_common" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+text = "Навыки"
+
+[node name="Button_skills_sex" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+text = "Секс навыки"
+
+[node name="Button_clothes" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+text = "Одежда"
+
+[node name="Control" type="Control" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+text = "Особенности"
+
+[node name="First_features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+
+[node name="Second_features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+
+[node name="Third_features" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+
+[node name="Button_send_home" type="Button" parent="Status_slave/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l04ef")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yn26m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0kanp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kifck")
+text = "Отправить в комнату"
+
+[node name="Status_appearance" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 448.0
+offset_top = 88.0
+offset_right = 928.0
+offset_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="Status_appearance"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dmf61")
+expand_mode = 1
+
+[node name="Status" type="PanelContainer" parent="Status_appearance"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 72.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_clsy2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_appearance/Status"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Status/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Beauty" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_stx5r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_b82g1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1yjpe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_84mlg")
+text = "Красота"
+flat = true
+alignment = 0
+
+[node name="Endurance" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Выносливость"
+alignment = 0
+
+[node name="Softness" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Чуствительность"
+alignment = 0
+
+[node name="Mind" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Сообразительность"
+alignment = 0
+
+[node name="Physique" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Телосложение"
+alignment = 0
+
+[node name="Style" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Стиль"
+alignment = 0
+
+[node name="Personality" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Характер"
+alignment = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_appearance/Status/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Button" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rw3si")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4krkm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncmxn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fa4u7")
+flat = true
+alignment = 0
+
+[node name="Button2" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rw3si")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4krkm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncmxn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fa4u7")
+flat = true
+alignment = 0
+
+[node name="Button3" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rw3si")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4krkm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncmxn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fa4u7")
+flat = true
+alignment = 0
+
+[node name="Button4" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rw3si")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4krkm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncmxn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fa4u7")
+flat = true
+alignment = 0
+
+[node name="Button5" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rw3si")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4krkm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncmxn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fa4u7")
+flat = true
+alignment = 0
+
+[node name="Button6" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rw3si")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4krkm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncmxn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fa4u7")
+flat = true
+alignment = 0
+
+[node name="Button7" type="Button" parent="Status_appearance/Status/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rw3si")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4krkm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk8v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncmxn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fa4u7")
+flat = true
+alignment = 0
+
+[node name="Close_status" type="Button" parent="Status_appearance"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 40.0
+offset_right = 448.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_appearance/Close_status"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wxddg")
+expand_mode = 1
+
+[node name="Back_status" type="Button" parent="Status_appearance"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_appearance/Back_status"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Info_beauty" type="PanelContainer" parent="Status_appearance"]
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 432.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_osavc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Info_beauty"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_appearance/Info_beauty/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Изуродована"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Status_appearance/Info_beauty/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.2, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Неказистая"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Status_appearance/Info_beauty/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Миловидная"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Status_appearance/Info_beauty/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Привлекательная"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Status_appearance/Info_beauty/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "Красавица"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Status_appearance/Info_beauty/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Королева красоты"
+horizontal_alignment = 1
+
+[node name="Info_endurance" type="PanelContainer" parent="Status_appearance"]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 448.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_osavc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Info_endurance"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_appearance/Info_endurance/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Измождённая"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Status_appearance/Info_endurance/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.2, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Немощная"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Status_appearance/Info_endurance/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Слабое здоровье"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Status_appearance/Info_endurance/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Здорова"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Status_appearance/Info_endurance/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "Выносливая"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Status_appearance/Info_endurance/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Как лошадь"
+horizontal_alignment = 1
+
+[node name="Info_softness" type="PanelContainer" parent="Status_appearance"]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 448.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_osavc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Info_softness"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_appearance/Info_softness/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Бесчуственная"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Status_appearance/Info_softness/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.2, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Огрубевшая"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Status_appearance/Info_softness/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Слегка огрубевшая"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Status_appearance/Info_softness/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Чуствительная"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Status_appearance/Info_softness/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "Нежная"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Status_appearance/Info_softness/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Нежная как цветок"
+horizontal_alignment = 1
+
+[node name="Info_mind" type="PanelContainer" parent="Status_appearance"]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 448.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_osavc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Info_mind"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_appearance/Info_mind/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Дура"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Status_appearance/Info_mind/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.2, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Глупая"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Status_appearance/Info_mind/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Недалёкая"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Status_appearance/Info_mind/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Сообразительная"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Status_appearance/Info_mind/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "Умная"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Status_appearance/Info_mind/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Интеллектуальная"
+horizontal_alignment = 1
+
+[node name="Info_physique" type="PanelContainer" parent="Status_appearance"]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 448.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_osavc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Info_physique"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_appearance/Info_physique/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Как спичка"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Status_appearance/Info_physique/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.2, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Худая"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Status_appearance/Info_physique/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Жирная"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Status_appearance/Info_physique/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Полная"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Status_appearance/Info_physique/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "Подтянутая"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Status_appearance/Info_physique/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Стройная"
+horizontal_alignment = 1
+
+[node name="Info_style" type="PanelContainer" parent="Status_appearance"]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 448.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_osavc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Info_style"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_appearance/Info_style/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Чумичка"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Status_appearance/Info_style/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.2, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Невзрачная"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Status_appearance/Info_style/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Ухоженная"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Status_appearance/Info_style/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Изящная"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Status_appearance/Info_style/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "Элегантная"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Status_appearance/Info_style/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Икона стиля"
+horizontal_alignment = 1
+
+[node name="Info_personality" type="PanelContainer" parent="Status_appearance"]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 448.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_osavc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_appearance/Info_personality"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_appearance/Info_personality/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Безвольная"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Status_appearance/Info_personality/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.2, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Бесхребетная"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Status_appearance/Info_personality/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Слабохарактерная"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Status_appearance/Info_personality/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Самостоятельная"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Status_appearance/Info_personality/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "Твёрдый характер"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Status_appearance/Info_personality/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Волевая"
+horizontal_alignment = 1
+
+[node name="Status_anatomy" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 448.0
+offset_top = 88.0
+offset_right = 928.0
+offset_bottom = 720.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Status_anatomy"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 72.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ynuu6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_anatomy/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_anatomy/PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="Boobs_size" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Размер груди"
+alignment = 0
+
+[node name="Lactation" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Лактация"
+alignment = 0
+
+[node name="Boobs_piercing" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Пирсинг грудиы"
+alignment = 0
+
+[node name="Boobs_modification" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Модификация груди"
+alignment = 0
+
+[node name="Age" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Возраст"
+alignment = 0
+
+[node name="Pussy" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Влагалище"
+alignment = 0
+
+[node name="Anal" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Анус"
+alignment = 0
+
+[node name="Pussy_piercing" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Пирсинг влагалища"
+alignment = 0
+
+[node name="Pussy_modification" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Модификация влагалища"
+alignment = 0
+
+[node name="Mark" type="Button" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Метка
+"
+alignment = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_anatomy/PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label2" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label3" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label4" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label5" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label6" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label7" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label8" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label9" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label10" type="Label" parent="Status_anatomy/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="TextureRect" type="TextureRect" parent="Status_anatomy"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dmf61")
+expand_mode = 1
+
+[node name="Close_status_anatomy" type="Button" parent="Status_anatomy"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 40.0
+offset_right = 448.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_anatomy/Close_status_anatomy"]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("5_wxddg")
+expand_mode = 1
+
+[node name="Status_skill_common" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 448.0
+offset_top = 88.0
+offset_right = 928.0
+offset_bottom = 720.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Status_skill_common"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 72.0
+offset_right = 440.0
+offset_bottom = 575.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ynuu6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_common/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_common/PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Housekeeping" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Домоводство"
+alignment = 0
+
+[node name="Cooking" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Кулинария"
+alignment = 0
+
+[node name="Medicine" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Медицина"
+alignment = 0
+
+[node name="Alchemy" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Алхимия
+"
+alignment = 0
+
+[node name="Paperwork" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Делопроизводство"
+alignment = 0
+
+[node name="Etiquette_and_rethoric" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Этикет и риторика"
+alignment = 0
+
+[node name="Combat_training" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Боевые подготовка"
+alignment = 0
+
+[node name="Dancer" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Танцовщица"
+alignment = 0
+
+[node name="Singer" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Певица"
+alignment = 0
+
+[node name="Misician" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Певица"
+alignment = 0
+
+[node name="Dog" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Собака"
+alignment = 0
+
+[node name="Cat" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Кошка"
+alignment = 0
+
+[node name="Poni" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Пони"
+alignment = 0
+
+[node name="Hauler" type="Button" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Носильщик"
+alignment = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_common/PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.6, 0.4, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Label2" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label3" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label4" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label5" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label6" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label7" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label8" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label9" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label10" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label11" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label12" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label13" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label14" type="Label" parent="Status_skill_common/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_common"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dmf61")
+expand_mode = 1
+
+[node name="Close_status_skill_common" type="Button" parent="Status_skill_common"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 40.0
+offset_right = 448.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_common/Close_status_skill_common"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wxddg")
+expand_mode = 1
+
+[node name="Status_skill_sex" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 448.0
+offset_top = 88.0
+offset_right = 928.0
+offset_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dmf61")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Status_skill_sex"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 432.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ynuu6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/PanelContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Petting" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Петтинг"
+
+[node name="Oral_sex" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Оральные ласки"
+
+[node name="Penetration" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Пенетрация"
+
+[node name="Group_sex" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Групповой секс"
+
+[node name="Demostration" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Демонстрация"
+
+[node name="Lesbian_sex" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Лесбийский секс"
+
+[node name="Fetishism" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Фетишизм"
+
+[node name="Xenophilia" type="Button" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Ксенофилия"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/PanelContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Petting_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Oral_sex_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Penetration_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Group_sex_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Demostration_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Lesbian_sex_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Fetishism_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Xenophilia_info" type="Label" parent="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Close_status_skill_sex" type="Button" parent="Status_skill_sex"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 40.0
+offset_right = 448.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Close_status_skill_sex"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wxddg")
+expand_mode = 1
+
+[node name="Petting" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Petting" type="PanelContainer" parent="Status_skill_sex/Petting"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_27rux")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Petting/Petting"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Petting/Petting/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Handjob" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Работа руками"
+
+[node name="Footsjob" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Работа ногами"
+
+[node name="Squeezing" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Обжимание"
+
+[node name="Payzuri" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Пайзури"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Petting/Petting/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Handjob_info" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Footsjob_info" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Squeezing_info" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Payzuri" type="Label" parent="Status_skill_sex/Petting/Petting/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_petting" type="Button" parent="Status_skill_sex/Petting"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Petting/Back_petting"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Oral_sex" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Oral_sex" type="PanelContainer" parent="Status_skill_sex/Oral_sex"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xgovb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Oral_sex/Oral_sex"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Kissing" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Поцелуи"
+
+[node name="Licking" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Вылизывание"
+
+[node name="Blowjob" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Минет"
+
+[node name="Irrumation" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Иррумация"
+
+[node name="Ass_licking" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Жополизание"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Kissing_info" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Licking_info" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Blowjob_info" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Irrumation_info" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Ass_licking_info" type="Label" parent="Status_skill_sex/Oral_sex/Oral_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_oral_sex" type="Button" parent="Status_skill_sex/Oral_sex"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Oral_sex/Back_oral_sex"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Penetration" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Penetration" type="PanelContainer" parent="Status_skill_sex/Penetration"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3kp3g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Penetration/Penetration"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Sex" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Секс"
+
+[node name="Anal_sex" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Анальный секс"
+
+[node name="Fisting" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Фистинг"
+
+[node name="Anal_fisting" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Анальный фистинг"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Sex_info" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Anal_sex_info" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Fisting_info" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Anal_fisting_info" type="Label" parent="Status_skill_sex/Penetration/Penetration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_penetration" type="Button" parent="Status_skill_sex/Penetration"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Penetration/Back_penetration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Group_sex" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Group_sex" type="PanelContainer" parent="Status_skill_sex/Group_sex"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ls2s8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Group_sex/Group_sex"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Mmw" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "М+М+Ж"
+
+[node name="Two_mans" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Два ствола"
+
+[node name="Three_mans" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Три ствола"
+
+[node name="Five_mans" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Пять мужчин"
+
+[node name="Bukkake" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Буккаке"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Mmw_info" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Two_mans_info" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Three_mans_info2" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Five_mans_info" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Bukkake_info" type="Label" parent="Status_skill_sex/Group_sex/Group_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_group_sex" type="Button" parent="Status_skill_sex/Group_sex"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Group_sex/Back_group_sex"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Demostration" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Demostration" type="PanelContainer" parent="Status_skill_sex/Demostration"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_74yia")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Demostration/Demostration"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Seduction" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Соблазнение"
+
+[node name="Masturbate" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Мастурбация"
+
+[node name="Dildo" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Дилдо"
+
+[node name="Exbitionism" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Экзбиционизм"
+
+[node name="Humiliation" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Унижение"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Seduction_info" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Masturbate_info" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Dildo_info" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Exbitionism_info" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Humiliation_info" type="Label" parent="Status_skill_sex/Demostration/Demostration/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_demonstration" type="Button" parent="Status_skill_sex/Demostration"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Demostration/Back_demonstration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Lesbian_sex" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lesbian_sex" type="PanelContainer" parent="Status_skill_sex/Lesbian_sex"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1dsvq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Caresses" type="Label" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Ласки"
+
+[node name="Kuni" type="Label" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Куни"
+
+[node name="Lesbian_sex" type="Label" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Лесбийский секс"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Caresses_info" type="Label" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Kuni_info" type="Label" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Lesbian_sex_info" type="Label" parent="Status_skill_sex/Lesbian_sex/Lesbian_sex/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_lesbian_sex" type="Button" parent="Status_skill_sex/Lesbian_sex"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Lesbian_sex/Back_lesbian_sex"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Fetishism" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fetishism" type="PanelContainer" parent="Status_skill_sex/Fetishism"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_12fgq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Fetishism/Fetishism"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Enema" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Клизмы"
+
+[node name="Masochism" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Мазохизм"
+
+[node name="Self_torture" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Самоистезание"
+
+[node name="Urinophilia" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Уринофилия"
+
+[node name="Coprophilia" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Копрофилия"
+
+[node name="Fuck_in_boobs" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Трах в соски"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Enema_info" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Masochism_info" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Self_torture_info" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Urinophilia_info" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Coprophilia_info" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Fuck_in_boobs_info" type="Label" parent="Status_skill_sex/Fetishism/Fetishism/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_fetishism" type="Button" parent="Status_skill_sex/Fetishism"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Fetishism/Back_fetishism"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Xenophilia" type="Control" parent="Status_skill_sex"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Xenophilia" type="PanelContainer" parent="Status_skill_sex/Xenophilia"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 440.0
+offset_bottom = 568.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_82gxy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_skill_sex/Xenophilia/Xenophilia"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Doggy" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Кабель"
+
+[node name="Pig" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Свинья"
+
+[node name="Arachnid" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Арахноид"
+
+[node name="Horse" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Конь"
+
+[node name="Tentacles" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Тентакли"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Doggy_info" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Pig_info" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Arachnid_info" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Horse_info" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Tentacles_info" type="Label" parent="Status_skill_sex/Xenophilia/Xenophilia/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+
+[node name="Back_xenophilia" type="Button" parent="Status_skill_sex/Xenophilia"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 40.0
+offset_right = 416.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_skill_sex/Xenophilia/Back_xenophilia"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5c082")
+expand_mode = 1
+
+[node name="Status_clothes" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 448.0
+offset_top = 88.0
+offset_right = 928.0
+offset_bottom = 720.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Status_clothes"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 72.0
+offset_right = 440.0
+offset_bottom = 575.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ynuu6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status_clothes/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Status_clothes/PanelContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Body" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "На теле"
+alignment = 0
+
+[node name="Hands" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "На руках"
+alignment = 0
+
+[node name="Legs" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "На ногах"
+alignment = 0
+
+[node name="Neck" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Шея"
+alignment = 0
+
+[node name="Nipples" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Соски"
+alignment = 0
+
+[node name="Clitoris" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Клитор"
+alignment = 0
+
+[node name="Ears" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Уши"
+alignment = 0
+
+[node name="Left_ring" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Левое кольцо"
+alignment = 0
+
+[node name="Right_ring" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Правое кольцо"
+alignment = 0
+
+[node name="Bellybutton" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Пупок"
+alignment = 0
+
+[node name="Tongue" type="Button" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eq47m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d4tn1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nrrij")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ymdsa")
+text = "Язык"
+alignment = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Status_clothes/PanelContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label2" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label3" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label4" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label5" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label6" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Label7" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label8" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label9" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label10" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="Label11" type="Label" parent="Status_clothes/PanelContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[node name="TextureRect" type="TextureRect" parent="Status_clothes"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dmf61")
+expand_mode = 1
+
+[node name="Close_status_clothes" type="Button" parent="Status_clothes"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 40.0
+offset_right = 448.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t2jg2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pv02h")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ldk1d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jqopv")
+
+[node name="TextureRect" type="TextureRect" parent="Status_clothes/Close_status_clothes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wxddg")
+expand_mode = 1
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 1160.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 112.0
+
+[node name="TextureRect" type="TextureRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_i8yph")
+expand_mode = 1
+
+[connection signal="pressed" from="Main_menu_basement/PanelContainer/VBoxContainer/Slave_free" to="." method="_on_slave_free_pressed"]
+[connection signal="pressed" from="Main_menu_basement/PanelContainer/VBoxContainer/Back_home" to="." method="_on_back_home_pressed"]
+[connection signal="pressed" from="Get_out_slave/PanelContainer/VBoxContainer/Slave_1" to="." method="_on_slave_1_pressed"]
+[connection signal="pressed" from="Get_out_slave/PanelContainer/VBoxContainer/Slave_2" to="." method="_on_slave_2_pressed"]
+[connection signal="pressed" from="Get_out_slave/PanelContainer/VBoxContainer/Slave_3" to="." method="_on_slave_3_pressed"]
+[connection signal="pressed" from="Get_out_slave/PanelContainer/VBoxContainer/Slave_4" to="." method="_on_slave_4_pressed"]
+[connection signal="pressed" from="Get_out_slave/PanelContainer/VBoxContainer/Slave_5" to="." method="_on_slave_5_pressed"]
+[connection signal="pressed" from="Get_out_slave/PanelContainer/VBoxContainer/Back_get_out_slave" to="." method="_on_back_get_out_slave_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_apperance" to="." method="_on_button_apperance_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_anatomy" to="." method="_on_button_anatomy_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_skills_common" to="." method="_on_button_skills_common_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_skills_sex" to="." method="_on_button_skills_sex_pressed"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_clothes" to="." method="_on_button_clothes_pressed"]
+[connection signal="mouse_entered" from="Status_slave/PanelContainer/VBoxContainer/Button_send_home" to="." method="_on_button_send_home_mouse_entered"]
+[connection signal="mouse_exited" from="Status_slave/PanelContainer/VBoxContainer/Button_send_home" to="." method="_on_button_send_home_mouse_exited"]
+[connection signal="pressed" from="Status_slave/PanelContainer/VBoxContainer/Button_send_home" to="." method="_on_button_send_home_pressed"]
+[connection signal="pressed" from="Status_appearance/Status/HBoxContainer/VBoxContainer/Beauty" to="." method="_on_beauty_pressed"]
+[connection signal="pressed" from="Status_appearance/Status/HBoxContainer/VBoxContainer/Endurance" to="." method="_on_endurance_pressed"]
+[connection signal="pressed" from="Status_appearance/Status/HBoxContainer/VBoxContainer/Softness" to="." method="_on_softness_pressed"]
+[connection signal="pressed" from="Status_appearance/Status/HBoxContainer/VBoxContainer/Mind" to="." method="_on_mind_pressed"]
+[connection signal="pressed" from="Status_appearance/Status/HBoxContainer/VBoxContainer/Physique" to="." method="_on_physique_pressed"]
+[connection signal="pressed" from="Status_appearance/Status/HBoxContainer/VBoxContainer/Style" to="." method="_on_style_pressed"]
+[connection signal="pressed" from="Status_appearance/Status/HBoxContainer/VBoxContainer/Personality" to="." method="_on_personality_pressed"]
+[connection signal="pressed" from="Status_appearance/Close_status" to="." method="_on_close_status_pressed"]
+[connection signal="pressed" from="Status_appearance/Back_status" to="." method="_on_back_status_pressed"]
+[connection signal="pressed" from="Status_anatomy/Close_status_anatomy" to="." method="_on_close_status_anatomy_pressed"]
+[connection signal="pressed" from="Status_skill_common/Close_status_skill_common" to="." method="_on_close_status_skill_common_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Petting" to="." method="_on_petting_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Oral_sex" to="." method="_on_oral_sex_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Penetration" to="." method="_on_penetration_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Group_sex" to="." method="_on_group_sex_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Demostration" to="." method="_on_demostration_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Lesbian_sex" to="." method="_on_lesbian_sex_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Fetishism" to="." method="_on_fetishism_pressed"]
+[connection signal="pressed" from="Status_skill_sex/PanelContainer/HBoxContainer/VBoxContainer/Xenophilia" to="." method="_on_xenophilia_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Close_status_skill_sex" to="." method="_on_close_status_skill_sex_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Petting/Back_petting" to="." method="_on_back_petting_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Oral_sex/Back_oral_sex" to="." method="_on_back_oral_sex_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Penetration/Back_penetration" to="." method="_on_back_penetration_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Group_sex/Back_group_sex" to="." method="_on_back_group_sex_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Demostration/Back_demonstration" to="." method="_on_back_demonstration_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Lesbian_sex/Back_lesbian_sex" to="." method="_on_back_lesbian_sex_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Fetishism/Back_fetishism" to="." method="_on_back_fetishism_pressed"]
+[connection signal="pressed" from="Status_skill_sex/Xenophilia/Back_xenophilia" to="." method="_on_back_xenophilia_pressed"]
+[connection signal="pressed" from="Status_clothes/Close_status_clothes" to="." method="_on_close_status_clothes_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

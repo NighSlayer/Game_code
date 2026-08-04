@@ -1,0 +1,168 @@
+[gd_scene load_steps=27 format=3 uid="uid://bh3hessk826tw"]
+
+[ext_resource type="Script" uid="uid://dbbata3f503mg" path="res://gd/balance_scen.gd" id="1_5cfss"]
+[ext_resource type="Texture2D" uid="uid://chn4bkh7n5h0a" path="res://GameData/img/Game/Places/Home/Interiors/Beds/basic_bed.jpg" id="2_8nbmn"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="3_0v7u0"]
+[ext_resource type="Script" uid="uid://b8nb8doxgyshv" path="res://gd/Custom classes/Class_game_button.gd" id="4_u8mjd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8mjd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvqbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pualn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fb1eh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uecxw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c1cxu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t7vgu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgawc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qijni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhefi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jeqn0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1boj5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_by60k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5wwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqtql"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4r4wk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0v7u0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fn5ns"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_swoyv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ptbb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gycsw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n23ki"]
+
+[node name="Balance_scen" type="Node2D"]
+script = ExtResource("1_5cfss")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_8nbmn")
+
+[node name="Full_slave" type="TextureRect" parent="."]
+offset_left = 488.0
+offset_top = 128.0
+offset_right = 1280.0
+offset_bottom = 1080.0
+stretch_mode = 6
+
+[node name="Actions" type="PanelContainer" parent="."]
+offset_left = 96.0
+offset_top = 128.0
+offset_right = 480.0
+offset_bottom = 1024.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u8mjd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Actions"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Actions/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+
+[node name="Generate_new_slave" type="Button" parent="Actions/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(225, 90)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0v7u0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pvqbp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pualn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fb1eh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uecxw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c1cxu")
+text = "Сгенерировать нового раба"
+autowrap_mode = 2
+script = ExtResource("4_u8mjd")
+base_style = null
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Start_button" type="Button" parent="Actions/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0v7u0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t7vgu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xgawc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qijni")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uhefi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jeqn0")
+text = "Начать оучение"
+autowrap_mode = 2
+script = ExtResource("4_u8mjd")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Back" type="Button" parent="Actions/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0v7u0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1boj5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_by60k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e5wwi")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_oqtql")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4r4wk")
+text = "Выход из режима баланса
+"
+autowrap_mode = 2
+script = ExtResource("4_u8mjd")
+base_style = null
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Slaves" type="PanelContainer" parent="."]
+visible = false
+offset_left = 96.0
+offset_top = 128.0
+offset_right = 480.0
+offset_bottom = 1024.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0v7u0")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Slaves"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Slaves/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+
+[node name="Break_training" type="Button" parent="Slaves/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0v7u0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fn5ns")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_swoyv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ptbb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gycsw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n23ki")
+text = "Выйти из обучения
+"
+autowrap_mode = 2
+script = ExtResource("4_u8mjd")
+base_style = null
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[connection signal="pressed" from="Actions/ScrollContainer/VBoxContainer/Generate_new_slave" to="." method="_on_generate_new_slave_pressed"]
+[connection signal="pressed" from="Actions/ScrollContainer/VBoxContainer/Start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Actions/ScrollContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Slaves/ScrollContainer/VBoxContainer/Break_training" to="." method="_on_break_training_pressed"]

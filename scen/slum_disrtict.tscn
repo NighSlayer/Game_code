@@ -1,0 +1,611 @@
+[gd_scene load_steps=28 format=3 uid="uid://tidhthejrrmi"]
+
+[ext_resource type="Script" uid="uid://82swrpucfian" path="res://gd/slum_district.gd" id="1_8hnhm"]
+[ext_resource type="AudioStream" uid="uid://dnhn5w8av4qw1" path="res://GameData/snd/Game/Interface/Нажатия на клавишу.mp3" id="1_bj01t"]
+[ext_resource type="Texture2D" uid="uid://lfsg4c6l3dkx" path="res://GameData/img/Game/Places/Slum_district/Трущобы.jpg" id="2_bcp56"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="3_2laxh"]
+[ext_resource type="Texture2D" uid="uid://bml0i3kmmieu7" path="res://GameData/img/Main menu/Настройки.png" id="4_5g0oy"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="4_xvear"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="5_sek6m"]
+[ext_resource type="Texture2D" uid="uid://cqps0tyd3ldvc" path="res://GameData/img/Game/Interface/home.jpg" id="6_yu5h3"]
+[ext_resource type="Texture2D" uid="uid://m14634t3bqcw" path="res://GameData/img/Game/Interface/Info.png" id="8_4xq8f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nojl5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi1yx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gf7hd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0ixo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cflkb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w8aoc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylu7b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogkat"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmurw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edfyb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8gnmi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uvkh3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tt3aj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcnur"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y5d5s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ef38r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8k7j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6i76j"]
+
+[node name="Slum_disrtict" type="Node2D"]
+script = ExtResource("1_8hnhm")
+
+[node name="Steps" type="AudioStreamPlayer" parent="."]
+
+[node name="Place_music" type="AudioStreamPlayer" parent="."]
+
+[node name="Button_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_bj01t")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_bcp56")
+expand_mode = 1
+
+[node name="Walk_on_city" type="PanelContainer" parent="."]
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nojl5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Walk_on_city"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Go_to_elite_district" type="Button" parent="Walk_on_city/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Пойти в элитный район"
+
+[node name="TextureRect" type="TextureRect" parent="Walk_on_city/VBoxContainer/Go_to_elite_district"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Go_to_rich_district" type="Button" parent="Walk_on_city/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Пойти в богатый район"
+
+[node name="TextureRect" type="TextureRect" parent="Walk_on_city/VBoxContainer/Go_to_rich_district"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Go_to_merchant_district" type="Button" parent="Walk_on_city/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Пойти в купеческий район"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Walk_on_city/VBoxContainer/Go_to_merchant_district"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Go_to_buisness_district" type="Button" parent="Walk_on_city/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Пойти в деловой район"
+
+[node name="TextureRect" type="TextureRect" parent="Walk_on_city/VBoxContainer/Go_to_buisness_district"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Go_to_poor_district" type="Button" parent="Walk_on_city/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Пойти в бедный район"
+
+[node name="TextureRect" type="TextureRect" parent="Walk_on_city/VBoxContainer/Go_to_poor_district"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Go_to_suburb_district" type="Button" parent="Walk_on_city/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Пойти в пригород"
+
+[node name="TextureRect" type="TextureRect" parent="Walk_on_city/VBoxContainer/Go_to_suburb_district"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Places_in_the_district" type="PanelContainer" parent="."]
+offset_left = 1440.0
+offset_top = 192.0
+offset_right = 1824.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nojl5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Places_in_the_district"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Enter_brothel" type="Button" parent="Places_in_the_district/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Зайти в Бордель"
+
+[node name="TextureRect" type="TextureRect" parent="Places_in_the_district/VBoxContainer/Enter_brothel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Enter_contrabandist" type="Button" parent="Places_in_the_district/VBoxContainer"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Зайти к контрабандистам"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Places_in_the_district/VBoxContainer/Enter_contrabandist"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Enter_flea_market" type="Button" parent="Places_in_the_district/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Зайти на блошиный рынок"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Places_in_the_district/VBoxContainer/Enter_flea_market"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Enter_sex_shop_atribute" type="Button" parent="Places_in_the_district/VBoxContainer"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Зайти в магазин секс атрибутики"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Places_in_the_district/VBoxContainer/Enter_sex_shop_atribute"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Enter_living_area" type="Button" parent="Places_in_the_district/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_xvear")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Зайти в жилую зону"
+
+[node name="TextureRect" type="TextureRect" parent="Places_in_the_district/VBoxContainer/Enter_living_area"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Living_area" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 704.0
+offset_bottom = 640.0
+
+[node name="Merchant_living_places" type="PanelContainer" parent="Living_area"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ogkat")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Living_area/Merchant_living_places"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="First_citizen" type="Button" parent="Living_area/Merchant_living_places/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Первый жилец"
+
+[node name="TextureRect" type="TextureRect" parent="Living_area/Merchant_living_places/VBoxContainer/First_citizen"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Second_citizen" type="Button" parent="Living_area/Merchant_living_places/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Второй жилец"
+
+[node name="TextureRect" type="TextureRect" parent="Living_area/Merchant_living_places/VBoxContainer/Second_citizen"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Third_citizen" type="Button" parent="Living_area/Merchant_living_places/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Третий жилец"
+
+[node name="TextureRect" type="TextureRect" parent="Living_area/Merchant_living_places/VBoxContainer/Third_citizen"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Guards_living_places" type="PanelContainer" parent="Living_area"]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 576.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ogkat")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Living_area/Guards_living_places"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="First_citizen" type="Button" parent="Living_area/Guards_living_places/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Первый жилец"
+
+[node name="TextureRect" type="TextureRect" parent="Living_area/Guards_living_places/VBoxContainer/First_citizen"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Second_citizen" type="Button" parent="Living_area/Guards_living_places/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Второй жилец"
+
+[node name="TextureRect" type="TextureRect" parent="Living_area/Guards_living_places/VBoxContainer/Second_citizen"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Third_citizen" type="Button" parent="Living_area/Guards_living_places/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yi1yx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gf7hd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0ixo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cflkb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w8aoc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylu7b")
+text = "Третий жилец"
+
+[node name="TextureRect" type="TextureRect" parent="Living_area/Guards_living_places/VBoxContainer/Third_citizen"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2laxh")
+expand_mode = 1
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 1792.0
+offset_top = 64.0
+offset_right = 1856.0
+offset_bottom = 128.0
+
+[node name="TextureRect" type="TextureRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5g0oy")
+expand_mode = 1
+
+[node name="Info" type="PanelContainer" parent="."]
+visible = false
+offset_left = 448.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 576.0
+
+[node name="TextureRect" type="TextureRect" parent="Info"]
+layout_mode = 2
+texture = ExtResource("5_sek6m")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Info"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Узкие улочки, словно опухоль на теле города, сплетаются из обшарпанных хибар и обвалившихся стен, где каждый закоулок пахнет гнилью и надеждой, умершей задолго до рассвета. Грязь на стенах смешивается с кровью, а фонари едва пронзают мрак. Здесь бордели притворяются лавками, контрабандисты продают запретное за углом, а барахолка — единственный рынок, где можно купить всё: от драгоценных украшений до старых лохмотьев. Стража не заглядывает дальше главной улицы — их страх перед бандитскими когтями и гнилым дыханием трущоб сильнее долга."
+
+[node name="Place_info" type="Button" parent="."]
+offset_left = 1728.0
+offset_top = 64.0
+offset_right = 1792.0
+offset_bottom = 128.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bmurw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_edfyb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8gnmi")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uvkh3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tt3aj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fcnur")
+
+[node name="TextureRect" type="TextureRect" parent="Place_info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_4xq8f")
+expand_mode = 1
+
+[node name="Home" type="Button" parent="."]
+top_level = true
+offset_left = 1728.0
+offset_top = 896.0
+offset_right = 1856.0
+offset_bottom = 1028.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y5d5s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ef38r")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u8k7j")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6i76j")
+flat = true
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Home"]
+show_behind_parent = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_yu5h3")
+expand_mode = 1
+
+[connection signal="pressed" from="Walk_on_city/VBoxContainer/Go_to_elite_district" to="." method="_on_go_to_elite_district_pressed"]
+[connection signal="pressed" from="Walk_on_city/VBoxContainer/Go_to_rich_district" to="." method="_on_go_to_rich_district_pressed"]
+[connection signal="pressed" from="Walk_on_city/VBoxContainer/Go_to_merchant_district" to="." method="_on_go_to_merchant_district_pressed"]
+[connection signal="pressed" from="Walk_on_city/VBoxContainer/Go_to_buisness_district" to="." method="_on_go_to_buisness_district_pressed"]
+[connection signal="pressed" from="Walk_on_city/VBoxContainer/Go_to_poor_district" to="." method="_on_go_to_poor_district_pressed"]
+[connection signal="pressed" from="Walk_on_city/VBoxContainer/Go_to_suburb_district" to="." method="_on_go_to_suburb_district_pressed"]
+[connection signal="pressed" from="Place_info" to="." method="_on_place_info_pressed"]
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]

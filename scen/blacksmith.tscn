@@ -1,0 +1,625 @@
+[gd_scene load_steps=25 format=3 uid="uid://bid5xgo06opbf"]
+
+[ext_resource type="Texture2D" uid="uid://6y26hew7s2sa" path="res://GameData/img/Game/Places/Suburb_district/Кузница/Кузница.png" id="1_5rwwr"]
+[ext_resource type="Script" uid="uid://bbds3ylwtbng3" path="res://gd/blacksmith.gd" id="1_bykoe"]
+[ext_resource type="Texture2D" uid="uid://dhyw2tbuqf7a4" path="res://GameData/img/Game/Places/Suburb_district/Кузница/Кузнец.png" id="2_ee0oq"]
+[ext_resource type="FontFile" uid="uid://chiisg5vx8gla" path="res://GameData/Fonts/Второстепенные персонажи.ttf" id="3_uh23h"]
+[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="4_0ecnp"]
+[ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="5_u0sf0"]
+[ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="6_7lht0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0yla8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrwx2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q838u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t4nkh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6vql8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sfa2r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxlwb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45l0h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cd0lm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_42yeb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aeuk1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2xye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gj355"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_58s1n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4inc2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c1xr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ctpjm"]
+
+[node name="Blacksmith" type="Node2D"]
+script = ExtResource("1_bykoe")
+
+[node name="Work_sound" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
+
+[node name="Embient" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_5rwwr")
+expand_mode = 1
+
+[node name="Blacksmith" type="TextureRect" parent="."]
+offset_left = 576.0
+offset_top = 96.0
+offset_right = 1344.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ee0oq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Dialog" type="RichTextLabel" parent="."]
+offset_left = 576.0
+offset_top = 936.0
+offset_right = 1344.0
+offset_bottom = 1080.0
+theme_override_fonts/normal_font = ExtResource("3_uh23h")
+theme_override_font_sizes/normal_font_size = 30
+text = "Здарова, ты что-то хотел?"
+
+[node name="Texture" type="TextureRect" parent="Dialog"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_0ecnp")
+expand_mode = 1
+
+[node name="Actions" type="VBoxContainer" parent="."]
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_constants/separation = 25
+
+[node name="Work" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 90)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Отдать рабыню на работу"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Work"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Give_slave" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Предложить рабыню"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Give_slave"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Question" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Задать вопрос"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Question"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Buy_equipment" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Купить снаряжение"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Buy_equipment"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="Actions"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Выйти"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Actions/Exit"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Work" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_constants/separation = 25
+
+[node name="Clear_blacksmith" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Убраться в кузнице"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Clear_blacksmith"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Help_apprentice" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Помочь как подмастерье"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Help_apprentice"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Attract_visitors" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Привлекать посетителей"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Attract_visitors"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Back_work" type="Button" parent="Work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Назад"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Work/Back_work"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Buy_Equipment" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 480.0
+offset_bottom = 960.0
+theme_override_constants/separation = 25
+
+[node name="Clear_blacksmith" type="Button" parent="Buy_Equipment"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Убраться в кузнице"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Buy_Equipment/Clear_blacksmith"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Help_apprentice" type="Button" parent="Buy_Equipment"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Помочь как подмастерье"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Buy_Equipment/Help_apprentice"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Attract_visitors" type="Button" parent="Buy_Equipment"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Привлекать посетителей"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Buy_Equipment/Attract_visitors"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Back_buy_equipment" type="Button" parent="Buy_Equipment"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Назад"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Buy_Equipment/Back_buy_equipment"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Choose_slave" type="ScrollContainer" parent="."]
+visible = false
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 488.0
+offset_bottom = 960.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Choose_slave"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Choose_slave/VBoxContainer"]
+custom_minimum_size = Vector2(384, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l2xye")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gj355")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_58s1n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4inc2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_c1xr3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ctpjm")
+toggle_mode = true
+text = "Назад"
+
+[node name="Background" type="TextureRect" parent="Choose_slave/VBoxContainer/Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[node name="Rect_of_work" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="Rect_of_work"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Rect_of_work"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 1920.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Rect_of_work"]
+layout_mode = 0
+offset_left = 1664.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Rect_of_work"]
+layout_mode = 0
+offset_top = 896.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Picture_work" type="TextureRect" parent="Rect_of_work"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 192.0
+offset_right = 1664.0
+offset_bottom = 896.0
+expand_mode = 1
+
+[node name="Next" type="Button" parent="Rect_of_work"]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 960.0
+offset_right = 1633.0
+offset_bottom = 1020.0
+theme_override_fonts/font = ExtResource("5_u0sf0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yla8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrwx2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q838u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t4nkh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6vql8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sfa2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kxlwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_45l0h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cd0lm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_42yeb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aeuk1")
+text = "Дальше"
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Rect_of_work/Next"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_7lht0")
+expand_mode = 1
+
+[connection signal="pressed" from="Actions/Work" to="." method="_on_work_pressed"]
+[connection signal="pressed" from="Actions/Give_slave" to="." method="_on_give_slave_pressed"]
+[connection signal="pressed" from="Actions/Question" to="." method="_on_question_pressed"]
+[connection signal="pressed" from="Actions/Buy_equipment" to="." method="_on_buy_equipment_pressed"]
+[connection signal="pressed" from="Actions/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Work/Clear_blacksmith" to="." method="_on_clear_blacksmith_pressed"]
+[connection signal="pressed" from="Work/Help_apprentice" to="." method="_on_help_apprentice_pressed"]
+[connection signal="pressed" from="Work/Attract_visitors" to="." method="_on_attract_visitors_pressed"]
+[connection signal="pressed" from="Work/Back_work" to="." method="_on_back_work_pressed"]
+[connection signal="pressed" from="Buy_Equipment/Back_buy_equipment" to="." method="_on_back_buy_equipment_pressed"]
+[connection signal="pressed" from="Choose_slave/VBoxContainer/Back" to="." method="_on_back_choose_slave_pressed"]
+[connection signal="pressed" from="Rect_of_work/Next" to="." method="_on_next_pressed"]
