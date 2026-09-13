@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://daxwuae36d64b" path="res://GameData/img/Game/Girls/Full/Auctions/275.png" id="3_0xb22"]
 [ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="4_30wtd"]
 [ext_resource type="Script" uid="uid://b8nb8doxgyshv" path="res://gd/Custom classes/Class_game_button.gd" id="5_0xb22"]
-[ext_resource type="Texture2D" uid="uid://crsru75s5g1ui" path="res://GameData/img/Game/Interface/Задник для текста.jpg" id="6_30wtd"]
 [ext_resource type="FontFile" uid="uid://bki8nm2mg70q1" path="res://GameData/Fonts/Текст.ttf" id="8_8ei8p"]
+[ext_resource type="Theme" uid="uid://ciwk6jmf80p14" path="res://Themes/Label_status_theme.tres" id="9_pwopb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltolv"]
 
@@ -22,6 +22,16 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6eyt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4u0e4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rapbe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bt745"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3g01c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ismw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ts3i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ei8p"]
 
@@ -93,15 +103,49 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kw8oh"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ioxy"]
+[sub_resource type="Curve" id="Curve_27gq7"]
+_data = [Vector2(0, 0.75280905), 0.0, 0.0, 0, 0, Vector2(0.25550663, 0.70786524), 0.0, 0.0, 0, 0, Vector2(0.629956, 0.7415731), 0.0, 0.0, 0, 0, Vector2(0.99559474, 1), 0.0, 0.0, 0, 0]
+point_count = 4
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_joxod"]
+[sub_resource type="Curve" id="Curve_umxdm"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.24669604, 0.3370787), 0.0, 0.0, 0, 0, Vector2(0.660793, 0.64044946), 0.0, 0.0, 0, 0, Vector2(0.9911895, 0.3595506), 0.0, 0.0, 0, 0]
+point_count = 4
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hs65u"]
+[sub_resource type="Curve" id="Curve_qxjka"]
+_data = [Vector2(0.12334803, 0.6629214), 0.0, 0.0, 0, 0, Vector2(0.41409695, 0.7865169), 0.0, 0.0, 0, 0, Vector2(0.70925117, 0.8089888), 0.0, 0.0, 0, 0, Vector2(0.9251102, 0.97752815), 0.0, 0.0, 0, 0]
+point_count = 4
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fc14h"]
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_pwopb"]
+curve_x = SubResource("Curve_27gq7")
+curve_y = SubResource("Curve_umxdm")
+curve_z = SubResource("Curve_qxjka")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87r8g"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ei8p"]
+texture = SubResource("CurveXYZTexture_pwopb")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qm3ml"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yapid"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mt8xn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6fyce"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qk7yy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltk7j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wklmm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2gxs"]
+bg_color = Color(0.78, 0.78, 0.78, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Game_Tutorial" type="Node2D" unique_id=503628854]
 script = ExtResource("1_nesgo")
@@ -111,6 +155,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_85rw8")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Full_slave" type="TextureRect" parent="." unique_id=1881394849]
 offset_left = 488.0
@@ -147,6 +192,21 @@ theme_override_constants/separation = 25
 script = ExtResource("2_j30hj")
 metadata/_custom_type_script = "uid://du4oqc4ssera7"
 
+[node name="Status" type="Button" parent="Actions_container/Actions/VerticalContainerforButtons" unique_id=520262168]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rapbe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bt745")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3g01c")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ismw5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ts3i")
+text = "Статус"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
 [node name="Talk" type="Button" parent="Actions_container/Actions/VerticalContainerforButtons" unique_id=1908065001]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
@@ -162,7 +222,7 @@ autowrap_mode = 2
 script = ExtResource("5_0xb22")
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
 
-[node name="Action" type="Button" parent="Actions_container/Actions/VerticalContainerforButtons" unique_id=700673522]
+[node name="Order" type="Button" parent="Actions_container/Actions/VerticalContainerforButtons" unique_id=700673522]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
@@ -218,7 +278,7 @@ autowrap_mode = 2
 script = ExtResource("5_0xb22")
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
 
-[node name="Action" type="Button" parent="Actions_container/Talk/VerticalContainerforButtons" unique_id=1204247634]
+[node name="Explain_situation" type="Button" parent="Actions_container/Talk/VerticalContainerforButtons" unique_id=1204247634]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
@@ -228,6 +288,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_p5n71")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_wy0uj")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_0u0jg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hw3f4")
+text = "Объяснить её положение"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
@@ -242,7 +303,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_sveay")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_e7rsf")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2h2qm")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p523e")
-text = "Попросить"
+text = "Спросить"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
@@ -267,13 +328,15 @@ offset_left = 384.0
 offset_top = 832.0
 offset_right = 1536.0
 offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ei8p")
 
 [node name="Background" type="TextureRect" parent="Dialog" unique_id=1536331088]
+visible = false
 layout_mode = 2
-texture = ExtResource("6_30wtd")
+texture = SubResource("CanvasTexture_qm3ml")
 expand_mode = 1
 
-[node name="Dialog_text" type="RichTextLabel" parent="Dialog" unique_id=173175235]
+[node name="Text" type="RichTextLabel" parent="Dialog" unique_id=173175235]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("8_8ei8p")
 theme_override_font_sizes/normal_font_size = 30
@@ -287,16 +350,75 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Next_phrase" type="Button" parent="Dialog" unique_id=411920916]
-visible = false
 show_behind_parent = true
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_1ioxy")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_joxod")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_hs65u")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_fc14h")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_87r8g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yapid")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mt8xn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6fyce")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qk7yy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ltk7j")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wklmm")
 
+[node name="Status" type="PanelContainer" parent="." unique_id=87414875]
+visible = false
+offset_left = 1472.0
+offset_top = 64.0
+offset_right = 1920.0
+offset_bottom = 1024.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_r2gxs")
+metadata/_edit_group_ = true
+
+[node name="VerticalContainerforButtons" type="VBoxContainer" parent="Status" unique_id=1395503945]
+layout_mode = 2
+theme_override_constants/separation = 25
+script = ExtResource("2_j30hj")
+metadata/_custom_type_script = "uid://du4oqc4ssera7"
+
+[node name="Slave_name_label" type="Label" parent="Status/VerticalContainerforButtons" unique_id=1150543539]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+theme_override_fonts/font = ExtResource("8_8ei8p")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Mood" type="HBoxContainer" parent="Status/VerticalContainerforButtons" unique_id=694432216]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Status/VerticalContainerforButtons/Mood" unique_id=1112321461]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+theme_override_fonts/font = ExtResource("8_8ei8p")
+theme_override_font_sizes/font_size = 30
+text = "Настроение"
+
+[node name="Value" type="Label" parent="Status/VerticalContainerforButtons/Mood" unique_id=134030669]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+theme_override_fonts/font = ExtResource("8_8ei8p")
+theme_override_font_sizes/font_size = 30
+
+[node name="Loyality" type="HBoxContainer" parent="Status/VerticalContainerforButtons" unique_id=1500718363]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Status/VerticalContainerforButtons/Loyality" unique_id=1466719789]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+text = "Лояльность"
+
+[node name="Value" type="Label" parent="Status/VerticalContainerforButtons/Loyality" unique_id=1444836085]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+
+[connection signal="pressed" from="Actions_container/Actions/VerticalContainerforButtons/Status" to="." method="_on_status_pressed"]
 [connection signal="pressed" from="Actions_container/Actions/VerticalContainerforButtons/Talk" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="Actions_container/Actions/VerticalContainerforButtons/Order" to="." method="_on_order_pressed"]
 [connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Set_as_slut" to="." method="_on_set_as_slut_pressed"]
+[connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Explain_situation" to="." method="_on_explain_situation_pressed"]
+[connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Ask" to="." method="_on_ask_pressed"]
 [connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Dialog/Next_phrase" to="." method="_on_next_phrase_pressed"]
