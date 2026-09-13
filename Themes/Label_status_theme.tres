@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://ciwk6jmf80p14"]
+
+[ext_resource type="FontFile" uid="uid://bki8nm2mg70q1" path="res://GameData/Fonts/Текст.ttf" id="1_pl41p"]
+
+[resource]
+default_font = ExtResource("1_pl41p")
+default_font_size = 30
