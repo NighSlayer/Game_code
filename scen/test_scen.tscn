@@ -1,7 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://cyq1mell2ecgk"]
+[gd_scene format=3 uid="uid://cyq1mell2ecgk"]
 
 [ext_resource type="Script" uid="uid://c82uq1q20rhh6" path="res://gd/test_scen.gd" id="1_upvos"]
-[ext_resource type="Texture2D" uid="uid://cwvl4k8guqasj" path="res://GameData/img/Game/Interface/Фон для статов.png" id="2_d2rnx"]
+[ext_resource type="Texture2D" uid="uid://du4yakmi3ava4" path="res://GameData/img/Game/Maze.jpg" id="2_224yg"]
 [ext_resource type="Texture2D" uid="uid://xl31bahnjsdd" path="res://GameData/img/Game/Girls/Body/Матка/Пустая Матка.png" id="3_im0ki"]
 [ext_resource type="Texture2D" uid="uid://btje08mewpn3k" path="res://GameData/img/Game/Girls/Body/Матка/Матка с 1 вариантом спермы.png" id="4_s8ts0"]
 [ext_resource type="Texture2D" uid="uid://nc3hn1h43tab" path="res://GameData/img/Game/Girls/Body/Матка/Матка с 2 вариантом спермы.png" id="5_yg5wm"]
@@ -11,10 +11,17 @@
 [ext_resource type="Texture2D" uid="uid://caofih7rpp4v7" path="res://icon.svg" id="9_l8jht"]
 [ext_resource type="Texture2D" uid="uid://dxq36p4ve44cn" path="res://GameData/img/Game/Interface/demo_back_button.png" id="10_tejed"]
 [ext_resource type="Texture2D" uid="uid://1e5nv02on6rs" path="res://GameData/img/Game/Interface/Зелёная галочка.png" id="11_a7ay8"]
+[ext_resource type="Script" uid="uid://4jatta00j5sj" path="res://gd/Enemy_path_calculating.gd" id="12_224yg"]
 [ext_resource type="Texture2D" uid="uid://tugwil3wrla8" path="res://GameData/img/Game/Interface/Крестик.png" id="12_s0l2k"]
 [ext_resource type="Texture2D" uid="uid://cfjit1km5jy8y" path="res://GameData/img/Game/Interface/Задний фон для клавишь.jpg" id="13_8fdx7"]
 [ext_resource type="Script" uid="uid://b8nb8doxgyshv" path="res://gd/Custom classes/Class_game_button.gd" id="14_8fdx7"]
 [ext_resource type="FontFile" uid="uid://c7ycsx4qdn2ck" path="res://GameData/Fonts/Подпись клавишь.ttf" id="14_224yg"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4u0e4"]
+vertices = PackedVector2Array(426, 269, 394, 269, 394, 267, 430, 267, 430, 361, 426, 296, 367, 361, 367, 453, 365, 453, 365, 328, 399, 328, 399, 332, 368, 332, 368, 359, 425, 359, 425, 301, 368, 296, 364, 301, 364, 85, 368, 87, 387, 85, 405, 87, 405, 78, 387, 78)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 3, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(6, 9, 12, 13), PackedInt32Array(4, 6, 13, 14), PackedInt32Array(5, 4, 14, 15), PackedInt32Array(16, 5, 15, 17), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(19, 18, 20, 21), PackedInt32Array(22, 21, 20, 23)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(377, 68, 377, 75, 354, 75, 354, 311, 415, 311, 415, 349, 378, 349, 378, 342, 409, 342, 409, 318, 355, 318, 355, 463, 377, 463, 377, 371, 440, 371, 440, 257, 384, 257, 384, 279, 416, 279, 416, 286, 378, 286, 378, 97, 415, 97, 415, 68)])
+border_size = 1.0
 
 [sub_resource type="Animation" id="Animation_lb8p6"]
 length = 0.001
@@ -59,7 +66,7 @@ _data = {
 bg_color = Color(0.924531, 0.416321, 0.424904, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tejed"]
-size = Vector2(32, 48)
+size = Vector2(8, 8)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a7ay8"]
 friction = 0.0
@@ -72,6 +79,7 @@ size = Vector2(36, 37)
 size = Vector2(49, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15vgk"]
+size = Vector2(8, 8)
 
 [sub_resource type="Animation" id="Animation_s0l2k"]
 resource_name = "Enemy_move"
@@ -111,28 +119,44 @@ _data = {
 &"RESET": SubResource("Animation_15vgk")
 }
 
-[node name="Test_scen" type="Node2D"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fdx7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_224yg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k1sqy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ywsna"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sopwu"]
+
+[node name="Test_scen" type="Node2D" unique_id=1457852927]
 script = ExtResource("1_upvos")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1716429439]
 offset_right = 1280.0
 offset_bottom = 720.0
-texture = ExtResource("2_d2rnx")
+texture = ExtResource("2_224yg")
 expand_mode = 1
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="."]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="TextureRect" unique_id=1542483400]
+navigation_polygon = SubResource("NavigationPolygon_4u0e4")
+
+[node name="Label" type="Label" parent="." unique_id=965813791]
 offset_left = 336.0
 offset_top = 184.0
 offset_right = 904.0
 offset_bottom = 280.0
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=551695069]
 offset_left = 328.0
 offset_top = 280.0
 offset_right = 896.0
 offset_bottom = 376.0
 
-[node name="Vagina" type="TextureRect" parent="."]
+[node name="Vagina" type="TextureRect" parent="." unique_id=1879920389]
+visible = false
 offset_left = 192.0
 offset_top = 376.0
 offset_right = 584.0
@@ -140,53 +164,54 @@ offset_bottom = 632.0
 texture = ExtResource("3_im0ki")
 expand_mode = 1
 
-[node name="Vagina2" type="TextureRect" parent="."]
+[node name="Vagina2" type="TextureRect" parent="." unique_id=656312613]
+visible = false
 offset_left = 648.0
 offset_top = 376.0
 offset_right = 1040.0
 offset_bottom = 632.0
 expand_mode = 1
 
-[node name="Boobs" type="TextureRect" parent="."]
+[node name="Boobs" type="TextureRect" parent="." unique_id=1663972556]
+visible = false
 offset_left = 392.0
 offset_top = 224.0
 offset_right = 784.0
 offset_bottom = 480.0
 expand_mode = 1
 
-[node name="Womb" type="TextureRect" parent="."]
+[node name="Womb" type="TextureRect" parent="." unique_id=1977181009]
+visible = false
 offset_left = 657.0
 offset_top = 128.0
 offset_right = 1049.0
 offset_bottom = 384.0
 expand_mode = 1
 
-[node name="Character" type="TextureRect" parent="."]
+[node name="Character" type="TextureRect" parent="." unique_id=1224575312]
 offset_left = 200.0
 offset_top = 88.0
 offset_right = 592.0
 offset_bottom = 344.0
 expand_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_7ji0t")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=477519808]
+libraries/ = SubResource("AnimationLibrary_7ji0t")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=633504698]
 offset_left = 8.0
 offset_top = 568.0
 offset_right = 152.0
 offset_bottom = 640.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_y2wxr")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(784, 416)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=338447561]
+position = Vector2(389, 327)
 motion_mode = 1
 platform_on_leave = 2
+metadata/_edit_group_ = true
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=764248648]
 limit_left = -5000
 limit_top = -5000
 limit_right = 5000
@@ -194,22 +219,22 @@ limit_bottom = 5000
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-scale = Vector2(0.25, 0.37499997)
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1425960735]
+scale = Vector2(0.0625, 0.062499758)
 texture = ExtResource("9_l8jht")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=470794472]
 shape = SubResource("RectangleShape2D_tejed")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=156988664]
 visible = false
 position = Vector2(888, 416)
 physics_material_override = SubResource("PhysicsMaterial_a7ay8")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1047108190]
 texture = ExtResource("10_tejed")
 
-[node name="Quest" type="TextureRect" parent="StaticBody2D"]
+[node name="Quest" type="TextureRect" parent="StaticBody2D" unique_id=1115296537]
 visible = false
 offset_left = -18.0
 offset_top = -52.0
@@ -218,51 +243,57 @@ offset_bottom = -19.0
 texture = ExtResource("11_a7ay8")
 expand_mode = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2059312612]
 shape = SubResource("RectangleShape2D_s0l2k")
 
-[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=853399173]
 position = Vector2(-19, -0.5)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=887529890]
 position = Vector2(11.5, 0)
 shape = SubResource("RectangleShape2D_kti5y")
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(225, 104)
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=965715065]
+position = Vector2(396, 82)
 motion_mode = 1
 platform_on_leave = 2
+script = ExtResource("12_224yg")
+speed = 50.0
+metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
-scale = Vector2(0.25, 0.37499997)
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=683440869]
+scale = Vector2(0.015625, 0.015625002)
 texture = ExtResource("12_s0l2k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2" unique_id=1812836600]
 shape = SubResource("RectangleShape2D_15vgk")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2"]
-libraries = {
-&"": SubResource("AnimationLibrary_kti5y")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2" unique_id=896037627]
+libraries/ = SubResource("AnimationLibrary_kti5y")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D2" unique_id=1598640184]
+path_desired_distance = 1.0
+target_desired_distance = 1.0
+debug_enabled = true
+debug_path_custom_color = Color(0.9696216, 0.45525253, 0.57973164, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1611743539]
 offset_left = 1280.0
 offset_top = 64.0
 offset_right = 1664.0
 offset_bottom = 456.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1424564491]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer" unique_id=871030689]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8784314, 0.11372549, 0.11372549, 1)
 theme_override_font_sizes/font_size = 30
 text = "ываыва"
 
-[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1187120321]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0.6999998, 1)
@@ -271,7 +302,7 @@ theme_override_font_sizes/font_size = 30
 text = "1234567890123456789012345"
 autowrap_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/Button3"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/Button3" unique_id=792186970]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -283,7 +314,7 @@ texture = ExtResource("13_8fdx7")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1023911013]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0.6999998, 1)
@@ -292,7 +323,7 @@ theme_override_font_sizes/font_size = 30
 text = "абвгдеёжзиклмнопрстуфхц"
 autowrap_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/Button4"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/Button4" unique_id=1584656583]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -304,15 +335,21 @@ texture = ExtResource("13_8fdx7")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=608138952]
 bus = &"SFX"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=1969026757]
 custom_minimum_size = Vector2(225, 60)
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_fonts/font = ExtResource("14_224yg")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8fdx7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_224yg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k1sqy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ywsna")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sopwu")
+autowrap_mode = 2
 script = ExtResource("14_8fdx7")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

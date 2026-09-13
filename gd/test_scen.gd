@@ -35,9 +35,10 @@ func get_enemy():
 
 func _process(delta: float) -> void:
 	get_input()
-	get_enemy()
-	$CharacterBody2D.move_and_collide(velocity * delta)
-	$CharacterBody2D2.move_and_collide(velocity_enemy * delta)
+	#get_enemy()
+	#$CharacterBody2D.move_and_collide(velocity * delta)
+	#$CharacterBody2D2.move_and_collide(velocity_enemy * delta)
+	pass
 	
 
 func _on_button_pressed():

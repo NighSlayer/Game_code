@@ -102,7 +102,7 @@ func draw_map(count_press):
 
 func _ready():
 	$Play_mini_game_time.start(60)
-	MainHeroCharacter.main_hero_visible(false)
+	MainHeroCharacter.main_hero_visible()
 	set_process(true)
 	$Score.set_text(str(score))
 	draw_map(2)
