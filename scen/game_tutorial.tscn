@@ -23,8 +23,6 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4u0e4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xb22"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ei8p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pwopb"]
@@ -93,6 +91,8 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4e4pm"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kw8oh"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ioxy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_joxod"]
@@ -152,11 +152,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_0xb22")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_8ei8p")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_pwopb")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ffvra")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_qsv24")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ei8p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pwopb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ffvra")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qsv24")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uiwhv")
 text = "Поговорить"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -167,11 +167,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_uiwhv")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_27gq7")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_umxdm")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_a0byh")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_pq2dw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_27gq7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_umxdm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_a0byh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pq2dw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nm5xf")
 text = "Приказать"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -182,11 +182,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nm5xf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_qxjka")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_8l4br")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_psgtb")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3c14a")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qxjka")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8l4br")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_psgtb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3c14a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qm3ml")
 text = "Попросить"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -208,11 +208,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_qm3ml")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_2aidh")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_2aam7")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p04rp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_drmpn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2aidh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2aam7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p04rp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_drmpn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_64moc")
 text = "Ты теперь шлюха"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -223,11 +223,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_64moc")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_xbhua")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_p5n71")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wy0uj")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_0u0jg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xbhua")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p5n71")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wy0uj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_0u0jg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hw3f4")
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
@@ -237,11 +237,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_hw3f4")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_e65n8")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_sveay")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_e7rsf")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2h2qm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e65n8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sveay")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e7rsf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2h2qm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p523e")
 text = "Попросить"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -252,11 +252,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_p523e")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_n1px7")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_3b5oj")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4nye7")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4e4pm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n1px7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3b5oj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4nye7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4e4pm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kw8oh")
 text = "Назад"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
