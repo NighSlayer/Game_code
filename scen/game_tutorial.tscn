@@ -23,16 +23,6 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4u0e4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rapbe"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bt745"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3g01c"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ismw5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ts3i"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ei8p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pwopb"]
@@ -52,6 +42,16 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pq2dw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nm5xf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qxjka"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8l4br"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_psgtb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3c14a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qm3ml"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2aidh"]
 
@@ -83,6 +83,36 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p523e"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4eson"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hpvxo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sc186"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_acxt5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fewj4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rn3w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6glq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ycdr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cv8cq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y85i8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqp4q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11l33"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nlilv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2007d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ukmd2"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n1px7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3b5oj"]
@@ -92,6 +122,46 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4e4pm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kw8oh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rapbe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bt745"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3g01c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ismw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ts3i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r5ioa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2uiq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oat8a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l84ch"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3oyp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_inqht"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7lyb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2agjv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1upr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61cbs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6j6v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_db86w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61mlh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thbsl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75t1h"]
 
 [sub_resource type="Curve" id="Curve_27gq7"]
 _data = [Vector2(0, 0.75280905), 0.0, 0.0, 0, 0, Vector2(0.25550663, 0.70786524), 0.0, 0.0, 0, 0, Vector2(0.629956, 0.7415731), 0.0, 0.0, 0, 0, Vector2(0.99559474, 1), 0.0, 0.0, 0, 0]
@@ -113,8 +183,6 @@ curve_z = SubResource("Curve_qxjka")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ei8p"]
 texture = SubResource("CurveXYZTexture_pwopb")
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_qm3ml"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yapid"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mt8xn"]
@@ -127,11 +195,9 @@ texture = SubResource("CurveXYZTexture_pwopb")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wklmm"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2gxs"]
-bg_color = Color(0.78, 0.78, 0.78, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ei8p"]
+content_margin_left = 5.0
+bg_color = Color(0.6014595, 0.5511084, 0.8488407, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -186,11 +252,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_rapbe")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_bt745")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_3g01c")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ismw5")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_8ts3i")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ei8p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pwopb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ffvra")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qsv24")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uiwhv")
 text = "Статус"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -201,11 +267,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_8ei8p")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_pwopb")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ffvra")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qsv24")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_uiwhv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_27gq7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_umxdm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_a0byh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pq2dw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nm5xf")
 text = "Поговорить"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -216,11 +282,11 @@ custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_30wtd")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxEmpty_27gq7")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_umxdm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_a0byh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pq2dw")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_nm5xf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qxjka")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8l4br")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_psgtb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3c14a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qm3ml")
 text = "Приказать"
 autowrap_mode = 2
 script = ExtResource("5_0xb22")
@@ -283,6 +349,51 @@ autowrap_mode = 2
 script = ExtResource("5_0xb22")
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
 
+[node name="Calm_down" type="Button" parent="Actions_container/Talk/VerticalContainerforButtons" unique_id=102505211]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4eson")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hpvxo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sc186")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_acxt5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fewj4")
+text = "Успокоить"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Threaten" type="Button" parent="Actions_container/Talk/VerticalContainerforButtons" unique_id=1528881568]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6rn3w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6glq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ycdr3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cv8cq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y85i8")
+text = "Пригрозить"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Appease" type="Button" parent="Actions_container/Talk/VerticalContainerforButtons" unique_id=1801710401]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cqp4q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_11l33")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nlilv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2007d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ukmd2")
+text = "Задобрить"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
 [node name="Back" type="Button" parent="Actions_container/Talk/VerticalContainerforButtons" unique_id=1512721181]
 custom_minimum_size = Vector2(225, 60)
 layout_mode = 2
@@ -298,18 +409,85 @@ autowrap_mode = 2
 script = ExtResource("5_0xb22")
 metadata/_custom_type_script = "uid://b8nb8doxgyshv"
 
+[node name="Ask" type="PanelContainer" parent="Actions_container" unique_id=12582718]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4u0e4")
+metadata/_tab_index = 2
+
+[node name="VerticalContainerforButtons" type="VBoxContainer" parent="Actions_container/Ask" unique_id=1549521123]
+layout_mode = 2
+theme_override_constants/separation = 25
+script = ExtResource("2_j30hj")
+metadata/_custom_type_script = "uid://du4oqc4ssera7"
+
+[node name="Set_as_slut" type="Button" parent="Actions_container/Ask/VerticalContainerforButtons" unique_id=277006697]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rapbe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bt745")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3g01c")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ismw5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ts3i")
+text = "Ты теперь шлюха"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Explain_situation" type="Button" parent="Actions_container/Ask/VerticalContainerforButtons" unique_id=815664363]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r5ioa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x2uiq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oat8a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_l84ch")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v3oyp")
+text = "Объяснить её положение"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Ask" type="Button" parent="Actions_container/Ask/VerticalContainerforButtons" unique_id=1456587140]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_inqht")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_l7lyb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2agjv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_e1upr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_61cbs")
+text = "Спросить"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
+[node name="Back" type="Button" parent="Actions_container/Ask/VerticalContainerforButtons" unique_id=442957771]
+custom_minimum_size = Vector2(225, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_30wtd")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l6j6v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_db86w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_61mlh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_thbsl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_75t1h")
+text = "Назад"
+autowrap_mode = 2
+script = ExtResource("5_0xb22")
+metadata/_custom_type_script = "uid://b8nb8doxgyshv"
+
 [node name="Dialog" type="PanelContainer" parent="." unique_id=867741866]
+visible = false
 offset_left = 384.0
 offset_top = 832.0
 offset_right = 1536.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_8ei8p")
-
-[node name="Background" type="TextureRect" parent="Dialog" unique_id=1536331088]
-visible = false
-layout_mode = 2
-texture = SubResource("CanvasTexture_qm3ml")
-expand_mode = 1
 
 [node name="Text" type="RichTextLabel" parent="Dialog" unique_id=173175235]
 layout_mode = 2
@@ -335,12 +513,11 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_ltk7j")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wklmm")
 
 [node name="Status" type="PanelContainer" parent="." unique_id=87414875]
-visible = false
-offset_left = 1472.0
+offset_left = 1344.0
 offset_top = 64.0
 offset_right = 1920.0
 offset_bottom = 1024.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_r2gxs")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ei8p")
 metadata/_edit_group_ = true
 
 [node name="VerticalContainerforButtons" type="VBoxContainer" parent="Status" unique_id=1395503945]
@@ -366,7 +543,7 @@ theme = ExtResource("9_pwopb")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
 theme_override_fonts/font = ExtResource("8_8ei8p")
 theme_override_font_sizes/font_size = 30
-text = "Настроение"
+text = "Настроение:"
 
 [node name="Value" type="Label" parent="Status/VerticalContainerforButtons/Mood" unique_id=134030669]
 layout_mode = 2
@@ -382,18 +559,58 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("9_pwopb")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
-text = "Лояльность"
+text = "Лояльность:"
 
 [node name="Value" type="Label" parent="Status/VerticalContainerforButtons/Loyality" unique_id=1444836085]
 layout_mode = 2
 theme = ExtResource("9_pwopb")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
 
+[node name="Submission" type="HBoxContainer" parent="Status/VerticalContainerforButtons" unique_id=314314083]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Status/VerticalContainerforButtons/Submission" unique_id=1861667550]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+theme_override_fonts/font = ExtResource("8_8ei8p")
+theme_override_font_sizes/font_size = 30
+text = "Подчинение:"
+
+[node name="Value" type="Label" parent="Status/VerticalContainerforButtons/Submission" unique_id=1624221559]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+theme_override_fonts/font = ExtResource("8_8ei8p")
+theme_override_font_sizes/font_size = 30
+
+[node name="Fear" type="HBoxContainer" parent="Status/VerticalContainerforButtons" unique_id=1464548320]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Status/VerticalContainerforButtons/Fear" unique_id=1056926477]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+theme_override_fonts/font = ExtResource("8_8ei8p")
+theme_override_font_sizes/font_size = 30
+text = "Страх:"
+
+[node name="Value" type="Label" parent="Status/VerticalContainerforButtons/Fear" unique_id=527162550]
+layout_mode = 2
+theme = ExtResource("9_pwopb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.60784316)
+theme_override_fonts/font = ExtResource("8_8ei8p")
+theme_override_font_sizes/font_size = 30
+
+[connection signal="tab_changed" from="Actions_container" to="." method="_on_actions_container_tab_changed"]
 [connection signal="pressed" from="Actions_container/Actions/VerticalContainerforButtons/Status" to="." method="_on_status_pressed"]
 [connection signal="pressed" from="Actions_container/Actions/VerticalContainerforButtons/Talk" to="." method="_on_talk_pressed"]
 [connection signal="pressed" from="Actions_container/Actions/VerticalContainerforButtons/Order" to="." method="_on_order_pressed"]
 [connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Set_as_slut" to="." method="_on_set_as_slut_pressed"]
 [connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Explain_situation" to="." method="_on_explain_situation_pressed"]
 [connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Ask" to="." method="_on_ask_pressed"]
+[connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Calm_down" to="." method="_on_calm_down_pressed"]
+[connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Threaten" to="." method="_on_threaten_pressed"]
+[connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Appease" to="." method="_on_appease_pressed"]
 [connection signal="pressed" from="Actions_container/Talk/VerticalContainerforButtons/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Dialog/Next_phrase" to="." method="_on_next_phrase_pressed"]
